@@ -25,14 +25,15 @@ jobs:
         
     - name: Install system dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          python3-pip python3-venv git unzip \
+        sudo apt-get update || true
+        sudo apt-get install -y --no-install-recommends \
+          python3-pip python3-venv git unzip wget \
           openjdk-17-jdk autoconf automake libtool \
           pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev \
           libtinfo5 cmake libffi-dev libssl-dev \
           libsqlite3-dev libjpeg-dev libpng-dev \
-          libltdl-dev
+          libltdl-dev build-essential || true
+        sudo apt-get install -f || true
           
     - name: Install Python dependencies
       run: |
