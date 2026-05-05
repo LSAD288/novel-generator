@@ -71,6 +71,7 @@ jobs:
         export PATH=$JAVA_HOME/bin:$PATH
         echo "JAVA_HOME=$JAVA_HOME"
         java -version
+        which java
         export ANDROIDSDK="$HOME/.buildozer/android/platform/android-sdk"
         export ANDROIDNDK="$HOME/.buildozer/android/platform/android-ndk-r25b"
         export ANDROIDAPI="33"
