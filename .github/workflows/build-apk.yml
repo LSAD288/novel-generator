@@ -7,6 +7,9 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,12 +31,13 @@ jobs:
           openjdk-17-jdk autoconf automake libtool \
           pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev \
           libtinfo5 cmake libffi-dev libssl-dev \
-          libsqlite3-dev libjpeg-dev libpng-dev
+          libsqlite3-dev libjpeg-dev libpng-dev \
+          libltdl-dev
           
     - name: Install Python dependencies
       run: |
         pip install --upgrade pip
-        pip install buildozer cython
+        pip install buildozer cython virtualenv
         
     - name: Cache Buildozer dependencies
       uses: actions/cache@v4
@@ -45,22 +49,56 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildozer-
           
+    - name: Check project structure
+      run: |
+        echo "=== Project files ==="
+        ls -la
+        echo "=== Python files ==="
+        ls -la *.py 2>/dev/null || echo "No .py files in root"
+        echo "=== Buildozer spec ==="
+        cat buildozer.spec | head -50
+        
     - name: Build APK
       run: |
         export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-        buildozer android debug
-      timeout-minutes: 60
+        export ANDROIDSDK="$HOME/.buildozer/android/platform/android-sdk"
+        export ANDROIDNDK="$HOME/.buildozer/android/platform/android-ndk-r25b"
+        export ANDROIDAPI="33"
+        export ANDROIDMINAPI="21"
+        buildozer android debug 2>&1 | tee build.log
+      timeout-minutes: 90
+      continue-on-error: true
+      
+    - name: Upload build log
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: build-log
+        path: build.log
+        retention-days: 7
+        
+    - name: Check APK exists
+      run: |
+        if [ -f bin/*.apk ]; then
+          echo "APK built successfully!"
+          ls -lh bin/*.apk
+        else
+          echo "APK not found. Checking build log..."
+          tail -100 build.log
+          exit 1
+        fi
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
+      if: success()
       with:
         name: novel-generator-apk
         path: bin/*.apk
         retention-days: 30
         
     - name: Create Release
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      uses: softprops/action-gh-release@v1
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main' && success()
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: v${{ github.run_number }}
         name: Release v${{ github.run_number }}
