@@ -1,0 +1,1507 @@
+{
+  "characters": {
+    "苏清晏": {
+      "first_appearance": 0,
+      "actions": [
+        {
+          "action": "支着下巴看梳头",
+          "timestamp": 0
+        },
+        {
+          "action": "自己插簪子",
+          "timestamp": 1
+        },
+        {
+          "action": "掀开车帘看街市",
+          "timestamp": 2
+        },
+        {
+          "action": "闭目养神",
+          "timestamp": 3
+        },
+        {
+          "action": "拈起棋子",
+          "timestamp": 4
+        },
+        {
+          "action": "回头望",
+          "timestamp": 5
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“太招摇了。”",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "“知道。”",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "“我陪着您上香。”",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "“是。”",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "“女儿明白。”",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "“有救。”",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "“不过是旁观者清。”",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "“是我不该打扰。”",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "“也好。”",
+          "timestamp": 8
+        },
+        {
+          "dialogue": "“家兄教的。胡乱下下罢了。”",
+          "timestamp": 9
+        },
+        {
+          "dialogue": "“苏清晏。”",
+          "timestamp": 10
+        },
+        {
+          "dialogue": "“公子说笑了。名字而已。”",
+          "timestamp": 11
+        },
+        {
+          "dialogue": "“家人来寻，我该走了。”",
+          "timestamp": 12
+        },
+        {
+          "dialogue": "“回去我想吃藕粉桂花糖糕。”",
+          "timestamp": 13
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "镇国公府四小姐，最小的女儿，闺名阿晏。",
+        "personality": "表面温顺乖巧，识大体，内心聪慧敏锐，有主见，善于观察和隐藏真实想法。",
+        "appearance": "少女，眉眼舒展，唇边天然带笑，长相讨喜清秀。手指纤细，指甲圆润整齐。"
+      },
+      "skills": [
+        "下棋（棋风绵密，以柔克刚）",
+        "阅读分析（会看密信账册）"
+      ]
+    },
+    "绿萼": {
+      "first_appearance": 1,
+      "actions": [
+        {
+          "action": "十指在发间翻飞梳头",
+          "timestamp": 0
+        },
+        {
+          "action": "低头去找簪子",
+          "timestamp": 1
+        },
+        {
+          "action": "系裙带，抚平裙摆",
+          "timestamp": 2
+        },
+        {
+          "action": "添灯油",
+          "timestamp": 3
+        },
+        {
+          "action": "满意地点头",
+          "timestamp": 4
+        },
+        {
+          "action": "笑了",
+          "timestamp": 5
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“哎”",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "“小姐今日气色好。”",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "“找到了！”",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "“小姐真好看。”",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "“奴婢这就让厨房做。”",
+          "timestamp": 4
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "苏清晏的贴身丫鬟，比苏清晏大一岁，自小跟着她。",
+        "personality": "手脚勤快，细心，话不多，忠诚。",
+        "appearance": "圆圆的侧脸，颊边有碎发。鬓角渗出细汗。"
+      },
+      "skills": [
+        "梳头（手巧）",
+        "服侍起居"
+      ]
+    },
+    "母亲（苏夫人）": {
+      "first_appearance": 2,
+      "actions": [
+        {
+          "action": "闭目养神",
+          "timestamp": 0
+        },
+        {
+          "action": "缓缓睁眼",
+          "timestamp": 1
+        },
+        {
+          "action": "目光落在女儿脸上",
+          "timestamp": 2
+        },
+        {
+          "action": "轻轻握住手",
+          "timestamp": 3
+        },
+        {
+          "action": "拍手背",
+          "timestamp": 4
+        },
+        {
+          "action": "眉头微蹙",
+          "timestamp": 5
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“你也该多出去走动走动。”",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "“阿晏。”",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "“一会儿到了寺里，别乱跑。”",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "“上完香，你去后山转转也好。”",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "“多带几个人。晚翠跟着，再让陈嬷嬷和两个护卫陪着。”",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "“别走太远。”",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "“你今年十五了。”",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "“有些事，娘该同你说说了。”",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "“咱们苏家，看着花团锦簇，实则如履薄冰。”",
+          "timestamp": 8
+        },
+        {
+          "dialogue": "“陛下近年身子不大好。”",
+          "timestamp": 9
+        },
+        {
+          "dialogue": "“这些，你哥哥姐姐们从不同你说，是怕你忧心。可娘觉得，你该知道。”",
+          "timestamp": 10
+        },
+        {
+          "dialogue": "“明白就好。”",
+          "timestamp": 11
+        },
+        {
+          "dialogue": "“嗯”",
+          "timestamp": 12
+        },
+        {
+          "dialogue": "“玩得可好？”",
+          "timestamp": 13
+        },
+        {
+          "dialogue": "“回吧。”",
+          "timestamp": 14
+        },
+        {
+          "dialogue": "“近来京中……不太平。”",
+          "timestamp": 15
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "镇国公夫人，苏清晏的母亲。",
+        "personality": "温柔但谨慎，深谋远虑，对子女关爱且有所期望。",
+        "appearance": "手持沉香木佛珠。掌心有薄茧。"
+      },
+      "skills": [
+        "持家",
+        "捻佛珠"
+      ]
+    },
+    "沈珩": {
+      "first_appearance": 3,
+      "actions": [
+        {
+          "action": "含笑看着",
+          "timestamp": 0
+        },
+        {
+          "action": "走近几步坐下",
+          "timestamp": 1
+        },
+        {
+          "action": "眼中闪过一丝讶异",
+          "timestamp": 2
+        },
+        {
+          "action": "静静看着棋盘",
+          "timestamp": 3
+        },
+        {
+          "action": "抬手虚虚一拦",
+          "timestamp": 4
+        },
+        {
+          "action": "拱手一礼",
+          "timestamp": 5
+        },
+        {
+          "action": "遥遥点头",
+          "timestamp": 6
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“这局棋，姑娘觉得，白子可还有救？”",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "“姑娘好眼力。”",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "“在下看了半日，竟未看出这手。”",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "“这局棋，是在下与一位友人所下。”",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "“姑娘留步。”",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "“既是有缘遇见，不如姑娘替我那友人，将这局棋下完？”",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "“姑娘棋艺精湛，在下佩服。”",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "“不知姑娘师承何人？”",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "“在下沈珩，越州人士，今岁入京赴考。敢问姑娘芳名？”",
+          "timestamp": 8
+        },
+        {
+          "dialogue": "“清晏……是个好名字。清平之世，海晏河清——姑娘家中长辈，必是心怀天下之人。”",
+          "timestamp": 9
+        },
+        {
+          "dialogue": "“今日与姑娘对弈，是在下之幸。他日若有机会，还想再向姑娘讨教。”",
+          "timestamp": 10
+        },
+        {
+          "dialogue": "“姑娘慢走。”",
+          "timestamp": 11
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "越州人士，入京赴考的书生。疑似与前朝沈家有关。",
+        "personality": "温和有礼，从容，聪慧，观察力强，可能隐藏身份或能力。",
+        "appearance": "青衣书生，十七八岁，身形修长，眉眼疏朗。穿着半旧的青布直裰，干净。手漂亮，手指修长，骨节分明，虎口有薄茧。"
+      },
+      "skills": [
+        "下棋（棋风凌厉，步步紧逼）",
+        "可能握剑（虎口有薄茧）"
+      ]
+    },
+    "二哥": {
+      "first_appearance": 4,
+      "actions": [
+        {
+          "action": "从兵部回来",
+          "timestamp": 0
+        },
+        {
+          "action": "同父亲在书房说话",
+          "timestamp": 1
+        },
+        {
+          "action": "压低了声音说话",
+          "timestamp": 2
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“……京里近来不太平，太子那边似有动作，三皇子那儿也不安分。父亲，咱们家——”",
+          "timestamp": 0
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "苏清晏的二哥，在兵部任职。"
+      }
+    },
+    "父亲": {
+      "first_appearance": 5,
+      "actions": [
+        {
+          "action": "抬手止住二哥说话",
+          "timestamp": 0
+        },
+        {
+          "action": "极轻地叹了口气",
+          "timestamp": 1
+        }
+      ],
+      "dialogues": [],
+      "locations": [],
+      "attributes": {
+        "identity": "镇国公，手握兵权。",
+        "personality": "谨慎"
+      }
+    },
+    "晚翠": {
+      "first_appearance": 6,
+      "actions": [
+        {
+          "action": "低声道",
+          "timestamp": 0
+        },
+        {
+          "action": "跟上来",
+          "timestamp": 1
+        },
+        {
+          "action": "轻轻唤",
+          "timestamp": 2
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“小姐，这儿风大，仔细着凉。”",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "“小姐，这人……”",
+          "timestamp": 1
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "苏清晏的仆人。"
+      }
+    },
+    "陈嬷嬷": {
+      "first_appearance": 7,
+      "actions": [
+        {
+          "action": "唤",
+          "timestamp": 0
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "“四小姐——四小姐——”",
+          "timestamp": 0
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "苏清晏的仆人。"
+      }
+    },
+    "住持": {
+      "first_appearance": 8,
+      "actions": [
+        {
+          "action": "亲自出来迎",
+          "timestamp": 0
+        }
+      ],
+      "dialogues": [],
+      "locations": [],
+      "attributes": {
+        "identity": "普济寺住持。",
+        "personality": "慈和",
+        "appearance": "须发皆白，面容慈和，眼神清亮。"
+      }
+    },
+    "墨安尘": {
+      "first_appearance": 9,
+      "actions": [
+        {
+          "action": "砸树练拳",
+          "timestamp": 0
+        },
+        {
+          "action": "甩手腕",
+          "timestamp": 1
+        },
+        {
+          "action": "捡枯叶捻碎",
+          "timestamp": 2
+        },
+        {
+          "action": "咬牙出拳",
+          "timestamp": 3
+        },
+        {
+          "action": "垂臂喘气",
+          "timestamp": 4
+        },
+        {
+          "action": "练拳砸树",
+          "timestamp": 5
+        },
+        {
+          "action": "出汗甩手",
+          "timestamp": 6
+        },
+        {
+          "action": "捡枯叶",
+          "timestamp": 7
+        },
+        {
+          "action": "换衣裳",
+          "timestamp": 8
+        },
+        {
+          "action": "握拳松开",
+          "timestamp": 9
+        },
+        {
+          "action": "与周小七对视",
+          "timestamp": 10
+        },
+        {
+          "action": "跟隨陸青禾",
+          "timestamp": 11
+        },
+        {
+          "action": "进入小屋",
+          "timestamp": 12
+        },
+        {
+          "action": "接住被弹飞的周小七",
+          "timestamp": 13
+        },
+        {
+          "action": "点燃火折子",
+          "timestamp": 14
+        },
+        {
+          "action": "拉开木门",
+          "timestamp": 15
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"怎么了？\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"没事，你找我有事吗？\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "\"行，我换身衣裳就去。\"",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "\"没事。皮外伤，不碍事。\"",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "\"出去玩。\"",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "\"去了就知道了。\"",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "“没事，你找我有事吗？”",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "“行，我换身衣裳就去。”",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "“出去玩。”",
+          "timestamp": 8
+        },
+        {
+          "dialogue": "“走吧。”",
+          "timestamp": 9
+        },
+        {
+          "dialogue": "\"青禾，到底什么事？\"",
+          "timestamp": 10
+        },
+        {
+          "dialogue": "\"小七，没事吧？\"",
+          "timestamp": 11
+        },
+        {
+          "dialogue": "\"走吧。\"",
+          "timestamp": 12
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "墨石镇居民，家中有老槐树。",
+        "personality": "沉稳，冷静，观察力敏锐。",
+        "appearance": "未直接描述（通过他人视角提及）。"
+      },
+      "skills": [
+        "《踏山诀》拳法，但血炁淤塞无法发挥",
+        "《踏山诀》拳法（撼岳式、沉山势）",
+        "血炁加持（辅助视物）",
+        "能稳定点燃火折子",
+        "轻松打开异常关闭的木门"
+      ]
+    },
+    "三丫": {
+      "first_appearance": 10,
+      "actions": [
+        {
+          "action": "推院门",
+          "timestamp": 0
+        },
+        {
+          "action": "站住等待",
+          "timestamp": 1
+        },
+        {
+          "action": "拉墨安尘袖子",
+          "timestamp": 2
+        },
+        {
+          "action": "低头打招呼",
+          "timestamp": 3
+        },
+        {
+          "action": "传话",
+          "timestamp": 4
+        },
+        {
+          "action": "拉袖子",
+          "timestamp": 5
+        },
+        {
+          "action": "低头后退",
+          "timestamp": 6
+        },
+        {
+          "action": "小步跑到陆青禾跟前",
+          "timestamp": 7
+        },
+        {
+          "action": "接过糖糕",
+          "timestamp": 8
+        },
+        {
+          "action": "回头看墨安尘和周小七",
+          "timestamp": 9
+        },
+        {
+          "action": "攥着糖糕跑回去",
+          "timestamp": 10
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"安尘哥！\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"安尘哥……你的手……\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "\"青禾姐她让我来找你，说有事商量。\"",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "\"嗯。她说在镇口老槐树那儿等你。\"",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "\"安尘哥……你的手……要不要我先给你包一下？\"",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "\"墨伯伯。\"",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "\"我不是。青禾姐只让我给安尘哥传个话。\"",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "“安尘哥……”",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "“青禾姐她让我来找你，说有事商量。”",
+          "timestamp": 8
+        },
+        {
+          "dialogue": "“我不是。”",
+          "timestamp": 9
+        },
+        {
+          "dialogue": "“墨伯伯。”",
+          "timestamp": 10
+        },
+        {
+          "dialogue": "\"青禾姐！\"",
+          "timestamp": 11
+        },
+        {
+          "dialogue": "\"青禾姐，你让我给安尘哥传话，我传到啦。\"",
+          "timestamp": 12
+        },
+        {
+          "dialogue": "\"青禾姐，那我先回去了。\"",
+          "timestamp": 13
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "墨石镇小女孩，有弟弟，为陆青禾跑腿传话。",
+        "personality": "活泼，有礼貌，懂事。",
+        "appearance": "小姑娘（未具体描述）。"
+      },
+      "skills": [
+        "未提及"
+      ]
+    },
+    "墨宽先": {
+      "first_appearance": 11,
+      "actions": [
+        {
+          "action": "放下柴捆",
+          "timestamp": 0
+        },
+        {
+          "action": "看树根脚印和树干红痕",
+          "timestamp": 1
+        },
+        {
+          "action": "叹气",
+          "timestamp": 2
+        },
+        {
+          "action": "挥手进屋",
+          "timestamp": 3
+        },
+        {
+          "action": "扛柴回家",
+          "timestamp": 4
+        },
+        {
+          "action": "观察脚印和树皮",
+          "timestamp": 5
+        },
+        {
+          "action": "挥手进屋",
+          "timestamp": 6
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"去哪儿？\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"别往山里去，最近山里不太平。\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "“去哪儿？”",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "“别往山里去，最近山里不太平。”",
+          "timestamp": 3
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "墨安尘的父亲，可能曾是武者，现在从事劳作",
+        "personality": "沉稳、严肃、不容置疑、担忧",
+        "appearance": "肩上扛一捆新劈的柴，穿皮甲沾暗红色污渍"
+      },
+      "skills": [
+        "未提及，但穿皮甲可能暗示战斗经验"
+      ]
+    },
+    "周小七": {
+      "first_appearance": 12,
+      "actions": [
+        {
+          "action": "快步走来",
+          "timestamp": 0
+        },
+        {
+          "action": "挠后脑勺",
+          "timestamp": 1
+        },
+        {
+          "action": "咧嘴笑",
+          "timestamp": 2
+        },
+        {
+          "action": "快步走",
+          "timestamp": 3
+        },
+        {
+          "action": "挠后脑勺",
+          "timestamp": 4
+        },
+        {
+          "action": "点头招呼",
+          "timestamp": 5
+        },
+        {
+          "action": "忍不住呛咳",
+          "timestamp": 6
+        },
+        {
+          "action": "挥散霉味、运起闭窍诀",
+          "timestamp": 7
+        },
+        {
+          "action": "四下打量",
+          "timestamp": 8
+        },
+        {
+          "action": "伸手指向佛像",
+          "timestamp": 9
+        },
+        {
+          "action": "转身冲门、用拳头轰击木门",
+          "timestamp": 10
+        },
+        {
+          "action": "被弹飞",
+          "timestamp": 11
+        },
+        {
+          "action": "给陆青禾渡血炁",
+          "timestamp": 12
+        },
+        {
+          "action": "惊叹墨安尘的能力",
+          "timestamp": 13
+        },
+        {
+          "action": "蹦到墨安尘身后",
+          "timestamp": 14
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"墨哥！\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"青禾姐让我去的。\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "\"你们这是……也去？\"",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "\"青禾姐到底有啥事？把我俩都叫去？\"",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "\"也是。\"",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "“墨哥！”",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "“青禾姐让我去的。”",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "“你们这是……也去？”",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "“也是。”",
+          "timestamp": 8
+        },
+        {
+          "dialogue": "\"青禾姐，这是什么破地方？我怎么从没听说墨石镇还有这么一间屋？\"",
+          "timestamp": 9
+        },
+        {
+          "dialogue": "\"咦？那是什么？看着怎么那么像…… 佛像！\"",
+          "timestamp": 10
+        },
+        {
+          "dialogue": "\"尘哥！你看，那是尊佛像！\"",
+          "timestamp": 11
+        },
+        {
+          "dialogue": "\"青、青禾姐！你、你这是惹怒神灵了！\"",
+          "timestamp": 12
+        },
+        {
+          "dialogue": "\"妈呀！\"",
+          "timestamp": 13
+        },
+        {
+          "dialogue": "\"尘哥，你也太牛了吧！\"",
+          "timestamp": 14
+        },
+        {
+          "dialogue": "\"我的个乖乖！尘哥！你真是活神仙啊！\"",
+          "timestamp": 15
+        },
+        {
+          "dialogue": "\"你连鬼神都能治住？以后你就是我亲哥！\"",
+          "timestamp": 16
+        },
+        {
+          "dialogue": "嗷一嗓子（惊呼）",
+          "timestamp": 17
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "墨石镇居民，墨安尘的同伴。",
+        "personality": "活泼，话多，好奇心强，有些冒失，害怕鬼神。",
+        "appearance": "未直接描述。"
+      },
+      "skills": [
+        "未提及，但气息平稳暗示体力好",
+        "步伐稳，气息平（可能练过）",
+        "血炁加持（辅助视物）",
+        "闭窍诀（抵御气味）",
+        "会用拳头攻击"
+      ]
+    },
+    "陆青禾": {
+      "first_appearance": 13,
+      "actions": [
+        {
+          "action": "托三丫和周小七传话",
+          "timestamp": 0
+        },
+        {
+          "action": "托人传话（提及）",
+          "timestamp": 1
+        },
+        {
+          "action": "站在树影里等待",
+          "timestamp": 2
+        },
+        {
+          "action": "点头微笑",
+          "timestamp": 3
+        },
+        {
+          "action": "摸三丫脑袋、给糖糕",
+          "timestamp": 4
+        },
+        {
+          "action": "转身带路",
+          "timestamp": 5
+        },
+        {
+          "action": "推开木门",
+          "timestamp": 6
+        },
+        {
+          "action": "取下吹燃火折子",
+          "timestamp": 7
+        },
+        {
+          "action": "快步上前扯下佛像上的破布",
+          "timestamp": 8
+        },
+        {
+          "action": "被无形力量推倒摔地",
+          "timestamp": 9
+        },
+        {
+          "action": "爬起",
+          "timestamp": 10
+        },
+        {
+          "action": "多次尝试点燃火折子失败",
+          "timestamp": 11
+        },
+        {
+          "action": "贴着墙找出口",
+          "timestamp": 12
+        },
+        {
+          "action": "拽住周小七冲出屋外",
+          "timestamp": 13
+        },
+        {
+          "action": "扶膝喘气",
+          "timestamp": 14
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"来了。\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"辛苦了。\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "\"回吧。路上小心。\"",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "\"跟我来。\"",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "\"少看点那些神鬼话本，自己吓自己。\"",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "\"谢谢。\"",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "\"我试试。（心理活动）",
+          "timestamp": 6
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "墨石镇居民，与墨安尘、周小七相识，托三丫传话。",
+        "personality": "端庄，沉稳，理性（不信鬼神），行动果决，但遭遇超常现象时也会动摇。",
+        "appearance": "穿一件洗得发白的青色细麻襦裙，袖口和领口绣着浅绿色细缠枝纹。裙子干净平整。身姿端正。"
+      },
+      "skills": [
+        "未提及",
+        "似乎略通医理（只认药石医理）",
+        "使用火折子"
+      ]
+    },
+    "Mo Anchen": {
+      "first_appearance": 14,
+      "actions": [
+        {
+          "action": "clenching fists",
+          "timestamp": 0
+        },
+        {
+          "action": "trembling fingers",
+          "timestamp": 1
+        },
+        {
+          "action": "touching tree bark",
+          "timestamp": 2
+        },
+        {
+          "action": "standing still",
+          "timestamp": 3
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"Qinghe, you tonight bring us here, not just to let us bump into ghosts, right?\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"You mean... is it true?\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "\"Go back and rest early, come pick me up tomorrow morning.\"",
+          "timestamp": 2
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "former cultivator with lost cultivation, son of Su Wanning",
+        "personality": "deep, scrutinizing, internally struggling, cautious",
+        "appearance": "deep-set eyes, not detailed further"
+      },
+      "skills": [
+        "hand-to-hand combat (currently weakened)",
+        "cultivation knowledge"
+      ]
+    },
+    "Lu Qinghe": {
+      "first_appearance": 15,
+      "actions": [
+        {
+          "action": "taking deep breaths",
+          "timestamp": 0
+        },
+        {
+          "action": "clearing throat",
+          "timestamp": 1
+        },
+        {
+          "action": "lighting fire striker",
+          "timestamp": 2
+        },
+        {
+          "action": "unfolding paper",
+          "timestamp": 3
+        },
+        {
+          "action": "whispering",
+          "timestamp": 4
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"Bringing you here is just to avoid being seen by others. Besides, I'm an atheist, why would I show you ghosts?\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"That herb can help you restore your former cultivation.\"",
+          "timestamp": 1
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "daughter of a herbalist, atheist, knowledgeable about herbs",
+        "personality": "calm under pressure, mysterious, purposeful, somewhat evasive",
+        "appearance": "not detailed in text"
+      },
+      "skills": [
+        "herbalism",
+        "using fire striker",
+        "knowledge of rare herbs"
+      ]
+    },
+    "Zhou Xiaoqi": {
+      "first_appearance": 16,
+      "actions": [
+        {
+          "action": "scratching head",
+          "timestamp": 0
+        },
+        {
+          "action": "patting chest",
+          "timestamp": 1
+        },
+        {
+          "action": "grabbing Mo Anchen's arm",
+          "timestamp": 2
+        },
+        {
+          "action": "frequently glancing",
+          "timestamp": 3
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"What is this thing? I've never seen it before.\"",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "\"Ah? Monsters?\"",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "\"Don't worry! With me here, I'll keep you safe!\"",
+          "timestamp": 2
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "friend of Mo Anchen, possibly from martial hall",
+        "personality": "curious, enthusiastic, impulsive, loyal",
+        "appearance": "not detailed"
+      },
+      "skills": [
+        "likely familiar with weapons like bows and short knives"
+      ]
+    },
+    "Su Wanning": {
+      "first_appearance": 17,
+      "actions": [
+        {
+          "action": "standing under tree",
+          "timestamp": 0
+        },
+        {
+          "action": "handing over coat",
+          "timestamp": 1
+        },
+        {
+          "action": "looking back",
+          "timestamp": 2
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "\"It's cold at night, put this on.\"",
+          "timestamp": 0
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "Mo Anchen's mother",
+        "personality": "quiet, caring, reserved",
+        "appearance": "wears plain colored skirt, dark green outer garment, hair loosely tied with a plain wooden hairpin"
+      },
+      "skills": [
+        "not specified"
+      ]
+    },
+    "陆云臻": {
+      "first_appearance": 18,
+      "actions": [
+        {
+          "action": "站立桥上",
+          "timestamp": 0
+        },
+        {
+          "action": "转身审视",
+          "timestamp": 1
+        },
+        {
+          "action": "手指点压",
+          "timestamp": 2
+        },
+        {
+          "action": "虚握空气",
+          "timestamp": 3
+        },
+        {
+          "action": "踩碎胸口",
+          "timestamp": 4
+        },
+        {
+          "action": "修补符文",
+          "timestamp": 5
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "人都到齐了吗？",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "规矩都清楚？",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "拿着。",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "去吧。",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "小辈，谁让你们来的？",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "不说？那就算了。",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "走得了吗？",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "该你了。",
+          "timestamp": 7
+        },
+        {
+          "dialogue": "可惜了，你没有抓住机会。",
+          "timestamp": 8
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "言真教上代执法长老，四十年前退隐，守桥人",
+        "personality": "冷静、强大、决绝、嘶哑声音",
+        "appearance": "个子不高，背驼，花白头发用木簪绾着，粗布麻衣，草鞋，老年斑"
+      },
+      "skills": [
+        "凝元境·初凝",
+        "灵炁操控",
+        "空间锁定",
+        "符文修补"
+      ]
+    },
+    "领头弟子": {
+      "first_appearance": 19,
+      "actions": [
+        {
+          "action": "躬身应答",
+          "timestamp": 0
+        },
+        {
+          "action": "双手接镇河石",
+          "timestamp": 1
+        },
+        {
+          "action": "厉喝敌袭",
+          "timestamp": 2
+        },
+        {
+          "action": "结炁盾防御",
+          "timestamp": 3
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "云臻师伯，弟子们奉命前来换防。",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "清楚。守台期间，不得言语，不得分神，不得擅离阵眼。以灵炁维持法阵，若有异动，即刻示警。",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "敌袭！",
+          "timestamp": 2
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "言真教弟子，换防领头人",
+        "personality": "尽职、警觉、勇敢",
+        "appearance": "年轻，穿青色道袍，雨水顺脸颊流"
+      },
+      "skills": [
+        "灵炁运转",
+        "结印防御",
+        "镇河石使用"
+      ]
+    },
+    "艮位弟子": {
+      "first_appearance": 20,
+      "actions": [
+        {
+          "action": "皱眉睁眼",
+          "timestamp": 0
+        },
+        {
+          "action": "身体绷紧",
+          "timestamp": 1
+        },
+        {
+          "action": "灵炁波动",
+          "timestamp": 2
+        },
+        {
+          "action": "被火焰击中死亡",
+          "timestamp": 3
+        }
+      ],
+      "dialogues": [],
+      "locations": [],
+      "attributes": {
+        "identity": "言真教弟子，坐艮位凹槽",
+        "personality": "隐忍、可能敏感",
+        "appearance": "穿青色道袍，脸色青白"
+      },
+      "skills": [
+        "灵炁维持",
+        "炁盾防御"
+      ]
+    },
+    "其他言真教弟子": {
+      "first_appearance": 21,
+      "actions": [
+        {
+          "action": "静坐守阵",
+          "timestamp": 0
+        },
+        {
+          "action": "被吸入裂缝",
+          "timestamp": 1
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "师伯……",
+          "timestamp": 0
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "言真教弟子，换防人员",
+        "personality": "纪律严明、恐惧",
+        "appearance": "穿青色道袍，年轻"
+      },
+      "skills": [
+        "灵炁维持",
+        "法阵支撑"
+      ]
+    },
+    "领头黑衣人": {
+      "first_appearance": 22,
+      "actions": [
+        {
+          "action": "抬手凝水珠",
+          "timestamp": 0
+        },
+        {
+          "action": "发射光束",
+          "timestamp": 1
+        },
+        {
+          "action": "暴退",
+          "timestamp": 2
+        },
+        {
+          "action": "被陆云臻压制死亡",
+          "timestamp": 3
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "还有两刻钟。雾气重新聚拢之前，必须破开法阵。",
+          "timestamp": 0
+        },
+        {
+          "dialogue": "按老规矩。我破阵，你们五个拦住守桥人。",
+          "timestamp": 1
+        },
+        {
+          "dialogue": "说。",
+          "timestamp": 2
+        },
+        {
+          "dialogue": "我知道他是谁。所以才让你们五个一起上。",
+          "timestamp": 3
+        },
+        {
+          "dialogue": "走。",
+          "timestamp": 4
+        },
+        {
+          "dialogue": "那老东西不在，速战速决。",
+          "timestamp": 5
+        },
+        {
+          "dialogue": "快了。",
+          "timestamp": 6
+        },
+        {
+          "dialogue": "你……你怎么会是凝元境……",
+          "timestamp": 7
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "入侵者领头，面具人",
+        "personality": "果断、狠辣、沙哑声音",
+        "appearance": "穿黑色夜行衣，戴木质面具，涂桐油"
+      },
+      "skills": [
+        "暗红色光束攻击",
+        "雨滴感应",
+        "指挥"
+      ]
+    },
+    "其他黑衣人": {
+      "first_appearance": 23,
+      "actions": [
+        {
+          "action": "扑向弟子",
+          "timestamp": 0
+        },
+        {
+          "action": "指刀插咽喉",
+          "timestamp": 1
+        },
+        {
+          "action": "火焰攻击",
+          "timestamp": 2
+        },
+        {
+          "action": "逃窜",
+          "timestamp": 3
+        },
+        {
+          "action": "炸成血雾",
+          "timestamp": 4
+        }
+      ],
+      "dialogues": [
+        {
+          "dialogue": "情报说，守桥人是言真教上代的执法长老，四十年前退隐的陆云臻。四十年前他就是聚炁境·通境，现在……不好说。",
+          "timestamp": 0
+        }
+      ],
+      "locations": [],
+      "attributes": {
+        "identity": "入侵者，面具人",
+        "personality": "沉默、狠辣、搏命",
+        "appearance": "穿黑色夜行衣，戴木质面具"
+      },
+      "skills": [
+        "指刀攻击",
+        "惨绿色火焰",
+        "鬼魅移动"
+      ]
+    }
+  },
+  "relationships": {},
+  "actions": {},
+  "dialogues": {},
+  "tracking_log": []
+}

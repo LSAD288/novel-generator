@@ -1,0 +1,195 @@
+{
+  "branches": {
+    "BP01": {
+      "data": {
+        "type": "转折点",
+        "description": "普济寺后山桃林，苏清晏与沈珩相遇。这是故事从单纯的家庭/朝堂背景介绍，转向引入外部关键人物和潜在情感/剧情线的关键点。",
+        "chapter": "第一章"
+      },
+      "status": "active",
+      "path": [],
+      "start_point": "普济寺后山桃林，苏清晏与沈珩相遇。这是故事从单纯的家庭/朝堂背景介绍，转向引入外部关键人物和潜在情感/剧情线的关键点。",
+      "start_chapter": "第一章"
+    },
+    "BP02": {
+      "data": {
+        "type": "选择点",
+        "description": "沈珩邀请苏清晏替友人下完棋局，苏清晏选择留下对弈。这个选择促成了两人的深入交流。",
+        "chapter": "第一章"
+      },
+      "status": "active",
+      "path": [],
+      "start_point": "沈珩邀请苏清晏替友人下完棋局，苏清晏选择留下对弈。这个选择促成了两人的深入交流。",
+      "start_chapter": "第一章"
+    },
+    "BP001": {
+      "data": {
+        "type": "转折点",
+        "description": "陆青禾传话召集墨安尘和周小七，可能引发新事件或选择",
+        "chapter": "当前章节"
+      },
+      "status": "active",
+      "path": [],
+      "start_point": "陆青禾传话召集墨安尘和周小七，可能引发新事件或选择",
+      "start_chapter": "当前章节"
+    },
+    "B1": {
+      "data": {
+        "type": "选择点",
+        "description": "墨安尘收到青禾邀请后，决定是否去镇口",
+        "chapter": "当前"
+      },
+      "status": "active",
+      "path": [],
+      "start_point": "墨安尘收到青禾邀请后，决定是否去镇口",
+      "start_chapter": "当前"
+    },
+    "BP1": {
+      "data": {
+        "type": "转折点",
+        "description": "陆青禾掀开佛像上的破布，触发了超自然现象，将故事从日常会面导向灵异惊悚方向。",
+        "chapter": "第二章"
+      },
+      "status": "active",
+      "path": [],
+      "start_point": "陆青禾掀开佛像上的破布，触发了超自然现象，将故事从日常会面导向灵异惊悚方向。",
+      "start_chapter": "第二章"
+    }
+  },
+  "branch_points": [
+    {
+      "data": {
+        "type": "转折点",
+        "description": "普济寺后山桃林，苏清晏与沈珩相遇。这是故事从单纯的家庭/朝堂背景介绍，转向引入外部关键人物和潜在情感/剧情线的关键点。",
+        "chapter": "第一章"
+      },
+      "timestamp": 0,
+      "branches_created": []
+    },
+    {
+      "data": {
+        "type": "选择点",
+        "description": "沈珩邀请苏清晏替友人下完棋局，苏清晏选择留下对弈。这个选择促成了两人的深入交流。",
+        "chapter": "第一章"
+      },
+      "timestamp": 1,
+      "branches_created": []
+    },
+    {
+      "data": {
+        "type": "转折点",
+        "description": "陆青禾传话召集墨安尘和周小七，可能引发新事件或选择",
+        "chapter": "当前章节"
+      },
+      "timestamp": 2,
+      "branches_created": []
+    },
+    {
+      "data": {
+        "type": "选择点",
+        "description": "墨安尘收到青禾邀请后，决定是否去镇口",
+        "chapter": "当前"
+      },
+      "timestamp": 3,
+      "branches_created": []
+    },
+    {
+      "data": {
+        "type": "转折点",
+        "description": "陆青禾掀开佛像上的破布，触发了超自然现象，将故事从日常会面导向灵异惊悚方向。",
+        "chapter": "第二章"
+      },
+      "timestamp": 4,
+      "branches_created": []
+    },
+    {
+      "data": {
+        "type": "decision point",
+        "description": "Mo Anchen's decision to trust Lu Qinghe and join the mountain trip",
+        "chapter": "implied from dialogue"
+      },
+      "timestamp": 5,
+      "branches_created": []
+    }
+  ],
+  "branch_outcomes": {
+    "BP01": [
+      {
+        "outcome": "苏清晏与沈珩相识，故事增加了新的角色关系和潜在发展方向（政治联盟、情感线、阴谋线等）。",
+        "timestamp": 0
+      }
+    ],
+    "BP02": [
+      {
+        "outcome": "两人完成一局棋，苏清晏险胜，互通姓名，沈珩表达欣赏并暗示再会。关系从陌生人发展为相识的棋友。",
+        "timestamp": 0
+      }
+    ],
+    "BP001": [
+      {
+        "outcome": "墨安尘决定去镇口，路径已确定，但后续未知",
+        "timestamp": 0
+      }
+    ],
+    "B1": [
+      {
+        "outcome": "墨安尘选择去镇口，与三丫、周小七同行",
+        "timestamp": 0
+      }
+    ],
+    "BP1": [
+      {
+        "outcome": "引发了一系列无法用常理解释的事件（降温、关门、无形推力、门无法暴力打开、火点不燃），导致三人被困并面临危险，同时揭示了墨安尘的特殊性。",
+        "timestamp": 0
+      },
+      {
+        "outcome": "Mo Anchen agrees to participate (implied from context, no explicit refusal)",
+        "timestamp": 1
+      }
+    ]
+  },
+  "alternate_paths": {},
+  "convergence_points": [
+    {
+      "data": {
+        "type": "convergence",
+        "description": "所有分支（家庭线、朝堂线、相遇线）目前汇聚于苏清晏返回镇国公府后的日常生活，但各自埋下的伏笔将在未来展开。",
+        "chapter": "第一章末"
+      },
+      "timestamp": 0
+    },
+    {
+      "data": {
+        "type": "convergence",
+        "description": "未发生，后续剧情可能汇聚",
+        "chapter": "未发生"
+      },
+      "timestamp": 1
+    },
+    {
+      "data": {
+        "type": "convergence",
+        "description": "未发生，可能后续在镇口汇聚",
+        "chapter": "后续"
+      },
+      "timestamp": 2
+    },
+    {
+      "data": {
+        "type": "convergence",
+        "description": "三人逃离小屋，回到屋外空地。此时，由掀布触发的“危机逃生”分支暂时结束，故事可能回归到陆青禾原始召集目的的主线上，但角色状态和认知已因分支经历而改变。",
+        "chapter": "第二章末尾"
+      },
+      "timestamp": 3
+    },
+    {
+      "data": {
+        "type": "convergence",
+        "description": "The mountain trip itself, where events will unfold",
+        "chapter": "future"
+      },
+      "timestamp": 4
+    }
+  ],
+  "tracking_log": []
+}

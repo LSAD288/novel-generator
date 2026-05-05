@@ -1,0 +1,1161 @@
+{
+  "characters": {
+    "陆云臻": {
+      "basic_info": "言真教上代执法长老，四十年前退隐，守桥人，实力凝元境",
+      "first_appearance": 0,
+      "attributes": [],
+      "skills": [],
+      "status": "active"
+    },
+    "领头弟子": {
+      "basic_info": "言真教年轻弟子，负责换防领头",
+      "first_appearance": 1,
+      "attributes": [],
+      "skills": [],
+      "status": "active"
+    },
+    "艮位弟子": {
+      "basic_info": "言真教弟子，坐艮位，可能敏感",
+      "first_appearance": 2,
+      "attributes": [],
+      "skills": [],
+      "status": "active"
+    },
+    "其他言真教弟子": {
+      "basic_info": "言真教弟子，参与守阵",
+      "first_appearance": 3,
+      "attributes": [],
+      "skills": [],
+      "status": "active"
+    },
+    "领头黑衣人": {
+      "basic_info": "入侵者领头，有组织，目标破阵",
+      "first_appearance": 4,
+      "attributes": [],
+      "skills": [],
+      "status": "active"
+    },
+    "其他黑衣人": {
+      "basic_info": "入侵者，执行命令",
+      "first_appearance": 5,
+      "attributes": [],
+      "skills": [],
+      "status": "active"
+    }
+  },
+  "relationships": {
+    "苏清晏|父亲、母亲、哥哥们、姐姐们": [
+      {
+        "type": "家人",
+        "intensity": 10,
+        "details": "被全家人捧在手心里宠爱，家人对她保护有加，不愿她知晓外界纷扰。",
+        "timestamp": 0
+      }
+    ],
+    "苏清晏|绿萼": [
+      {
+        "type": "主仆",
+        "intensity": 9,
+        "details": "亲密信任的主仆关系，绿萼细心服侍，知晓苏清晏部分隐秘（如深夜看密信）并默默支持。",
+        "timestamp": 0
+      }
+    ],
+    "苏清晏|沈珩": [
+      {
+        "type": "初遇/棋友",
+        "intensity": 2,
+        "details": "在桃林偶遇，因一局棋相识。苏清晏对沈珩的棋艺和潜在身份产生好奇和一丝戒备。沈珩对苏清晏表示欣赏并有意再会。",
+        "timestamp": 0
+      }
+    ],
+    "苏家|太子、三皇子": [
+      {
+        "type": "政治关联/潜在风险",
+        "intensity": 7,
+        "details": "苏家手握重兵，身处太子与三皇子的权力争夺漩涡中，处境微妙危险。",
+        "timestamp": 0
+      }
+    ],
+    "墨安尘|墨宽先": [
+      {
+        "type": "家人",
+        "intensity": 9,
+        "details": "父子关系，墨宽先担忧儿子血炁问题，但沟通简洁",
+        "timestamp": 0
+      },
+      {
+        "type": "家人（父子）",
+        "intensity": 9,
+        "details": "父子关系，墨宽先担忧儿子，观察练拳痕迹，警告安全",
+        "timestamp": 1
+      }
+    ],
+    "墨安尘|三丫": [
+      {
+        "type": "朋友",
+        "intensity": 7,
+        "details": "发小关系，三丫关心墨安尘，传话帮忙",
+        "timestamp": 0
+      },
+      {
+        "type": "朋友",
+        "intensity": 8,
+        "details": "从小一起长大，三丫关心墨安尘，传话时担心他的手",
+        "timestamp": 1
+      }
+    ],
+    "墨安尘|周小七": [
+      {
+        "type": "朋友",
+        "intensity": 6,
+        "details": "发小关系，一起长大，互动随意",
+        "timestamp": 0
+      },
+      {
+        "type": "朋友",
+        "intensity": 7,
+        "details": "一起长大，相遇时直接打招呼",
+        "timestamp": 1
+      },
+      {
+        "type": "朋友/同伴",
+        "intensity": 8,
+        "details": "两人同行，墨安尘会关照周小七（如接住他、询问安危）。周小七对墨安尘非常亲近且崇拜。",
+        "timestamp": 2
+      }
+    ],
+    "墨安尘|陆青禾": [
+      {
+        "type": "熟人",
+        "intensity": 4,
+        "details": "镇上相识，陆青禾文静少接触，但今次主动传话",
+        "timestamp": 0
+      },
+      {
+        "type": "熟人",
+        "intensity": 5,
+        "details": "青禾文静，很少接触，但突然邀请，可能有事",
+        "timestamp": 1
+      }
+    ],
+    "三丫|陆青禾": [
+      {
+        "type": "熟人",
+        "intensity": 5,
+        "details": "三丫受陆青禾托付传话",
+        "timestamp": 0
+      }
+    ],
+    "周小七|陆青禾": [
+      {
+        "type": "熟人",
+        "intensity": 4,
+        "details": "周小七受陆青禾传话，但平日无来往",
+        "timestamp": 0
+      }
+    ],
+    "三丫|墨宽先": [
+      {
+        "type": "邻里",
+        "intensity": 6,
+        "details": "三丫尊敬墨宽先，低头称呼'墨伯伯'",
+        "timestamp": 0
+      }
+    ],
+    "陆青禾|墨安尘": [
+      {
+        "type": "朋友/同伴",
+        "intensity": 7,
+        "details": "陆青禾主动找墨安尘（通过三丫传话），有重要事情需要他的参与。对他有一定信任。",
+        "timestamp": 0
+      }
+    ],
+    "陆青禾|周小七": [
+      {
+        "type": "朋友/同伴",
+        "intensity": 6,
+        "details": "彼此熟悉，陆青禾会指使周小七做事（让他跟来），周小七会抱怨但也会关心陆青禾（渡血炁）。陆青禾对周小七有类似姐姐的关照（给糖糕也给他弟弟）。",
+        "timestamp": 0
+      }
+    ],
+    "陆青禾|三丫": [
+      {
+        "type": "雇佣/邻里（年长者与孩童）",
+        "intensity": 5,
+        "details": "陆青禾请三丫跑腿传话，并给她糖糕作为酬劳或奖励，态度温和。",
+        "timestamp": 0
+      }
+    ],
+    "三丫|墨安尘": [
+      {
+        "type": "认识/邻里",
+        "intensity": 4,
+        "details": "三丫称墨安尘为“安尘哥”，传话给他，离开前会看他一眼，显示认识且可能有亲近感。",
+        "timestamp": 0
+      }
+    ],
+    "Mo Anchen|Lu Qinghe": [
+      {
+        "type": "former friends, now potential collaborators",
+        "intensity": 5,
+        "details": "Were close six years ago but grew distant after Mo Anchen's cultivation loss; now Lu Qinghe seeks his help for mountain trip",
+        "timestamp": 0
+      }
+    ],
+    "Mo Anchen|Zhou Xiaoqi": [
+      {
+        "type": "friends",
+        "intensity": 8,
+        "details": "Close friends, Zhou Xiaoqi is supportive and avoids sensitive topics about Mo Anchen's cultivation",
+        "timestamp": 0
+      }
+    ],
+    "Mo Anchen|Su Wanning": [
+      {
+        "type": "family (mother-son)",
+        "intensity": 9,
+        "details": "Loving but quiet relationship, Su Wanning shows care through actions",
+        "timestamp": 0
+      }
+    ],
+    "Lu Qinghe|Zhou Xiaoqi": [
+      {
+        "type": "acquaintances",
+        "intensity": 4,
+        "details": "Familiar with each other, Lu Qinghe gives instructions to Zhou Xiaoqi",
+        "timestamp": 0
+      }
+    ],
+    "陆云臻|言真教弟子": [
+      {
+        "type": "上下级",
+        "intensity": 8,
+        "details": "陆云臻是师伯，弟子们尊敬并听从命令",
+        "timestamp": 0
+      }
+    ],
+    "陆云臻|黑衣人": [
+      {
+        "type": "敌人",
+        "intensity": 10,
+        "details": "直接对抗，陆云臻杀死多名黑衣人",
+        "timestamp": 0
+      }
+    ],
+    "言真教弟子|黑衣人": [
+      {
+        "type": "敌人",
+        "intensity": 10,
+        "details": "战斗冲突，弟子被攻击",
+        "timestamp": 0
+      }
+    ]
+  },
+  "relationship_history": {
+    "苏清晏|父亲、母亲、哥哥们、姐姐们": [
+      {
+        "from": null,
+        "to": {
+          "type": "家人",
+          "intensity": 10,
+          "details": "被全家人捧在手心里宠爱，家人对她保护有加，不愿她知晓外界纷扰。",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "被完全保护",
+          "to": "开始被告知部分实情",
+          "reason": "母亲认为她年岁渐长，需明白家族处境。"
+        }
+      }
+    ],
+    "苏清晏|绿萼": [
+      {
+        "from": null,
+        "to": {
+          "type": "主仆",
+          "intensity": 9,
+          "details": "亲密信任的主仆关系，绿萼细心服侍，知晓苏清晏部分隐秘（如深夜看密信）并默默支持。",
+          "timestamp": 0
+        }
+      }
+    ],
+    "苏清晏|沈珩": [
+      {
+        "from": null,
+        "to": {
+          "type": "初遇/棋友",
+          "intensity": 2,
+          "details": "在桃林偶遇，因一局棋相识。苏清晏对沈珩的棋艺和潜在身份产生好奇和一丝戒备。沈珩对苏清晏表示欣赏并有意再会。",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "陌生人",
+          "to": "相识",
+          "reason": "桃林下棋。"
+        }
+      }
+    ],
+    "苏家|太子、三皇子": [
+      {
+        "from": null,
+        "to": {
+          "type": "政治关联/潜在风险",
+          "intensity": 7,
+          "details": "苏家手握重兵，身处太子与三皇子的权力争夺漩涡中，处境微妙危险。",
+          "timestamp": 0
+        }
+      }
+    ],
+    "墨安尘|墨宽先": [
+      {
+        "from": null,
+        "to": {
+          "type": "家人",
+          "intensity": 9,
+          "details": "父子关系，墨宽先担忧儿子血炁问题，但沟通简洁",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "暂无"
+        }
+      },
+      {
+        "from": {
+          "type": "家人",
+          "intensity": 9,
+          "details": "父子关系，墨宽先担忧儿子血炁问题，但沟通简洁",
+          "timestamp": 0
+        },
+        "to": {
+          "type": "家人（父子）",
+          "intensity": 9,
+          "details": "父子关系，墨宽先担忧儿子，观察练拳痕迹，警告安全",
+          "timestamp": 1
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "无"
+        }
+      }
+    ],
+    "墨安尘|三丫": [
+      {
+        "from": null,
+        "to": {
+          "type": "朋友",
+          "intensity": 7,
+          "details": "发小关系，三丫关心墨安尘，传话帮忙",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "暂无"
+        }
+      },
+      {
+        "from": {
+          "type": "朋友",
+          "intensity": 7,
+          "details": "发小关系，三丫关心墨安尘，传话帮忙",
+          "timestamp": 0
+        },
+        "to": {
+          "type": "朋友",
+          "intensity": 8,
+          "details": "从小一起长大，三丫关心墨安尘，传话时担心他的手",
+          "timestamp": 1
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "无"
+        }
+      }
+    ],
+    "墨安尘|周小七": [
+      {
+        "from": null,
+        "to": {
+          "type": "朋友",
+          "intensity": 6,
+          "details": "发小关系，一起长大，互动随意",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "暂无"
+        }
+      },
+      {
+        "from": {
+          "type": "朋友",
+          "intensity": 6,
+          "details": "发小关系，一起长大，互动随意",
+          "timestamp": 0
+        },
+        "to": {
+          "type": "朋友",
+          "intensity": 7,
+          "details": "一起长大，相遇时直接打招呼",
+          "timestamp": 1
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "无"
+        }
+      },
+      {
+        "from": {
+          "type": "朋友",
+          "intensity": 7,
+          "details": "一起长大，相遇时直接打招呼",
+          "timestamp": 1
+        },
+        "to": {
+          "type": "朋友/同伴",
+          "intensity": 8,
+          "details": "两人同行，墨安尘会关照周小七（如接住他、询问安危）。周小七对墨安尘非常亲近且崇拜。",
+          "timestamp": 2
+        },
+        "change": {
+          "from": "亲近的同伴关系",
+          "to": "周小七对墨安尘的崇拜感大幅增强",
+          "reason": "墨安尘在小屋事件中展现的不可思议的能力。"
+        }
+      }
+    ],
+    "墨安尘|陆青禾": [
+      {
+        "from": null,
+        "to": {
+          "type": "熟人",
+          "intensity": 4,
+          "details": "镇上相识，陆青禾文静少接触，但今次主动传话",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "普通相识",
+          "to": "可能加深联系",
+          "reason": "陆青禾罕见传话商量事情"
+        }
+      },
+      {
+        "from": {
+          "type": "熟人",
+          "intensity": 4,
+          "details": "镇上相识，陆青禾文静少接触，但今次主动传话",
+          "timestamp": 0
+        },
+        "to": {
+          "type": "熟人",
+          "intensity": 5,
+          "details": "青禾文静，很少接触，但突然邀请，可能有事",
+          "timestamp": 1
+        },
+        "change": {
+          "from": "无接触",
+          "to": "主动邀请",
+          "reason": "青禾托人传话"
+        }
+      }
+    ],
+    "三丫|陆青禾": [
+      {
+        "from": null,
+        "to": {
+          "type": "熟人",
+          "intensity": 5,
+          "details": "三丫受陆青禾托付传话",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "暂无"
+        }
+      }
+    ],
+    "周小七|陆青禾": [
+      {
+        "from": null,
+        "to": {
+          "type": "熟人",
+          "intensity": 4,
+          "details": "周小七受陆青禾传话，但平日无来往",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无接触",
+          "to": "开始接触",
+          "reason": "陆青禾传话"
+        }
+      }
+    ],
+    "三丫|墨宽先": [
+      {
+        "from": null,
+        "to": {
+          "type": "邻里",
+          "intensity": 6,
+          "details": "三丫尊敬墨宽先，低头称呼'墨伯伯'",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "无"
+        }
+      }
+    ],
+    "陆青禾|墨安尘": [
+      {
+        "from": null,
+        "to": {
+          "type": "朋友/同伴",
+          "intensity": 7,
+          "details": "陆青禾主动找墨安尘（通过三丫传话），有重要事情需要他的参与。对他有一定信任。",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "普通的信任与朋友关系",
+          "to": "可能增添了依赖或好奇（因墨安尘解决了她无法应对的危机）",
+          "reason": "小屋事件中，墨安尘表现出了陆青禾无法理解的特殊能力。"
+        }
+      }
+    ],
+    "陆青禾|周小七": [
+      {
+        "from": null,
+        "to": {
+          "type": "朋友/同伴",
+          "intensity": 6,
+          "details": "彼此熟悉，陆青禾会指使周小七做事（让他跟来），周小七会抱怨但也会关心陆青禾（渡血炁）。陆青禾对周小七有类似姐姐的关照（给糖糕也给他弟弟）。",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "普通朋友",
+          "to": "共历危险后关系更紧密，但周小七对陆青禾引发危险略有微词",
+          "reason": "共同经历了小屋内的诡异事件。"
+        }
+      }
+    ],
+    "陆青禾|三丫": [
+      {
+        "from": null,
+        "to": {
+          "type": "雇佣/邻里（年长者与孩童）",
+          "intensity": 5,
+          "details": "陆青禾请三丫跑腿传话，并给她糖糕作为酬劳或奖励，态度温和。",
+          "timestamp": 0
+        }
+      }
+    ],
+    "三丫|墨安尘": [
+      {
+        "from": null,
+        "to": {
+          "type": "认识/邻里",
+          "intensity": 4,
+          "details": "三丫称墨安尘为“安尘哥”，传话给他，离开前会看他一眼，显示认识且可能有亲近感。",
+          "timestamp": 0
+        }
+      }
+    ],
+    "Mo Anchen|Lu Qinghe": [
+      {
+        "from": null,
+        "to": {
+          "type": "former friends, now potential collaborators",
+          "intensity": 5,
+          "details": "Were close six years ago but grew distant after Mo Anchen's cultivation loss; now Lu Qinghe seeks his help for mountain trip",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "distant",
+          "to": "reconnecting",
+          "reason": "Lu Qinghe needs Mo Anchen's combat skills and reveals herb may restore his cultivation"
+        }
+      }
+    ],
+    "Mo Anchen|Zhou Xiaoqi": [
+      {
+        "from": null,
+        "to": {
+          "type": "friends",
+          "intensity": 8,
+          "details": "Close friends, Zhou Xiaoqi is supportive and avoids sensitive topics about Mo Anchen's cultivation",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "stable",
+          "to": "unchanged",
+          "reason": "No significant change shown"
+        }
+      }
+    ],
+    "Mo Anchen|Su Wanning": [
+      {
+        "from": null,
+        "to": {
+          "type": "family (mother-son)",
+          "intensity": 9,
+          "details": "Loving but quiet relationship, Su Wanning shows care through actions",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "stable",
+          "to": "unchanged",
+          "reason": "No change shown"
+        }
+      }
+    ],
+    "Lu Qinghe|Zhou Xiaoqi": [
+      {
+        "from": null,
+        "to": {
+          "type": "acquaintances",
+          "intensity": 4,
+          "details": "Familiar with each other, Lu Qinghe gives instructions to Zhou Xiaoqi",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "not specified",
+          "to": "unchanged",
+          "reason": "No change shown"
+        }
+      }
+    ],
+    "陆云臻|言真教弟子": [
+      {
+        "from": null,
+        "to": {
+          "type": "上下级",
+          "intensity": 8,
+          "details": "陆云臻是师伯，弟子们尊敬并听从命令",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无变化",
+          "to": "无变化",
+          "reason": "事件中关系未变"
+        }
+      }
+    ],
+    "陆云臻|黑衣人": [
+      {
+        "from": null,
+        "to": {
+          "type": "敌人",
+          "intensity": 10,
+          "details": "直接对抗，陆云臻杀死多名黑衣人",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "未知",
+          "to": "敌对",
+          "reason": "黑衣人袭击法阵"
+        }
+      }
+    ],
+    "言真教弟子|黑衣人": [
+      {
+        "from": null,
+        "to": {
+          "type": "敌人",
+          "intensity": 10,
+          "details": "战斗冲突，弟子被攻击",
+          "timestamp": 0
+        },
+        "change": {
+          "from": "无关系",
+          "to": "敌对",
+          "reason": "黑衣人袭击"
+        }
+      }
+    ]
+  },
+  "character_development": {
+    "苏清晏": [
+      {
+        "type": "ai_detected",
+        "description": "从被保护在深闺、对朝堂之事装作不知，到经母亲点明开始正式面对家族的政治处境。对沈珩的相遇打破了她日常的平静，内心产生涟漪和好奇。",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "沈珩": [
+      {
+        "type": "ai_detected",
+        "description": "首次出场，与女主角相遇。",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "母亲（苏夫人）": [
+      {
+        "type": "ai_detected",
+        "description": "从单纯带女儿上香，到主动在马车中透露朝堂与家族的艰难，对女儿的教育和保护方式发生微妙变化。",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "绿萼": [
+      {
+        "type": "ai_detected",
+        "description": "暂无显著变化。",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "墨安尘": [
+      {
+        "type": "ai_detected",
+        "description": "血炁淤塞无法恢复，但每日练拳不懈，心理压抑但坚韧",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      },
+      {
+        "type": "ai_detected",
+        "description": "六年来每日练拳，但血炁未恢复，手腕痛持续，心理从希望到烦躁",
+        "impact": "AI自动检测",
+        "timestamp": 1
+      },
+      {
+        "type": "ai_detected",
+        "description": "本章中展现了他超出常人的冷静和某种特殊能力（能点燃火折子、打开异常的门），似乎对异常现象有所了解或关联。",
+        "impact": "AI自动检测",
+        "timestamp": 2
+      }
+    ],
+    "三丫": [
+      {
+        "type": "ai_detected",
+        "description": "当前关心墨安尘手伤，传话陆青禾",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      },
+      {
+        "type": "ai_detected",
+        "description": "关心墨安尘，主动传话",
+        "impact": "AI自动检测",
+        "timestamp": 1
+      },
+      {
+        "type": "ai_detected",
+        "description": "本章仅作为引子角色，未显发展。",
+        "impact": "AI自动检测",
+        "timestamp": 2
+      }
+    ],
+    "墨宽先": [
+      {
+        "type": "ai_detected",
+        "description": "担忧儿子但沉默，叹气显示无奈",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      },
+      {
+        "type": "ai_detected",
+        "description": "对儿子担忧，但沉默寡言",
+        "impact": "AI自动检测",
+        "timestamp": 1
+      }
+    ],
+    "周小七": [
+      {
+        "type": "ai_detected",
+        "description": "当前被陆青禾传话，与墨安尘一同前往镇口",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      },
+      {
+        "type": "ai_detected",
+        "description": "被青禾邀请，好奇参与",
+        "impact": "AI自动检测",
+        "timestamp": 1
+      },
+      {
+        "type": "ai_detected",
+        "description": "从对鬼神将信将疑、略带挑衅（想过比划）的心态，转变为亲眼见证后深信不疑且极度恐惧，并对墨安尘产生了强烈的依赖和崇拜。",
+        "impact": "AI自动检测",
+        "timestamp": 2
+      }
+    ],
+    "陆青禾": [
+      {
+        "type": "ai_detected",
+        "description": "罕见主动传话，可能有事商量",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      },
+      {
+        "type": "ai_detected",
+        "description": "突然托人传话，可能有事商量",
+        "impact": "AI自动检测",
+        "timestamp": 1
+      },
+      {
+        "type": "ai_detected",
+        "description": "经历了信念危机。从十四年笃信药石医理、不信鬼神，到被超自然力量直接攻击后，世界观受到剧烈冲击，开始动摇和怀疑。",
+        "impact": "AI自动检测",
+        "timestamp": 2
+      }
+    ],
+    "Mo Anchen": [
+      {
+        "type": "ai_detected",
+        "description": "Potentially on verge of restoring cultivation through mysterious herb, from despair to hope",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "Lu Qinghe": [
+      {
+        "type": "ai_detected",
+        "description": "Reaching out to Mo Anchen for help, revealing secret knowledge",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "Zhou Xiaoqi": [
+      {
+        "type": "ai_detected",
+        "description": "Helping with the upcoming mountain trip, curious but respectful",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "Su Wanning": [
+      {
+        "type": "ai_detected",
+        "description": "Shows quiet concern for son, no major changes",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "陆云臻": [
+      {
+        "type": "ai_detected",
+        "description": "从平静守桥到决绝对抗，最终被吸入裂缝，可能隐藏实力",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "领头弟子": [
+      {
+        "type": "ai_detected",
+        "description": "从尽职守阵到死亡，无显著变化",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "艮位弟子": [
+      {
+        "type": "ai_detected",
+        "description": "死亡，无变化",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "其他言真教弟子": [
+      {
+        "type": "ai_detected",
+        "description": "部分死亡，部分被吸入裂缝",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "领头黑衣人": [
+      {
+        "type": "ai_detected",
+        "description": "从自信到恐惧死亡",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ],
+    "其他黑衣人": [
+      {
+        "type": "ai_detected",
+        "description": "多数死亡，一个重伤逃脱",
+        "impact": "AI自动检测",
+        "timestamp": 0
+      }
+    ]
+  },
+  "backstories": {
+    "苏清晏": [
+      {
+        "backstory": "苏家权势显赫（父掌兵权，兄任要职）",
+        "version": 0
+      },
+      {
+        "backstory": "朝堂暗流汹涌（太子与三皇子之争）",
+        "version": 1
+      },
+      {
+        "backstory": "她可能有不为人知的另一面或能力（看密信）",
+        "version": 2
+      }
+    ],
+    "沈珩": [
+      {
+        "backstory": "可能与前朝沈家（沈渊）有关",
+        "version": 0
+      },
+      {
+        "backstory": "可能身怀武功或另有身份（虎口薄茧）",
+        "version": 1
+      },
+      {
+        "backstory": "入京赴考可能只是表面目的",
+        "version": 2
+      }
+    ],
+    "母亲（苏夫人）": [
+      {
+        "backstory": "与苏家荣辱与共",
+        "version": 0
+      },
+      {
+        "backstory": "对政治局势有清晰认识",
+        "version": 1
+      }
+    ],
+    "绿萼": [
+      {
+        "backstory": "自小跟随苏清晏",
+        "version": 0
+      }
+    ],
+    "墨安尘": [
+      {
+        "backstory": "十岁高烧后血炁消失",
+        "version": 0
+      },
+      {
+        "backstory": "郎中诊断'先天不足'",
+        "version": 1
+      },
+      {
+        "backstory": "父亲曾请遍郎中求医",
+        "version": 2
+      },
+      {
+        "backstory": "十岁高烧后血炁消失",
+        "version": 3
+      },
+      {
+        "backstory": "父亲曾请郎中求医",
+        "version": 4
+      },
+      {
+        "backstory": "郎中诊断'先天不足''根基有损'",
+        "version": 5
+      },
+      {
+        "backstory": "家中院子里有老槐树",
+        "version": 6
+      },
+      {
+        "backstory": "似乎对超自然现象不陌生（反应平静）",
+        "version": 7
+      }
+    ],
+    "三丫": [
+      {
+        "backstory": "从小与墨安尘一起长大",
+        "version": 0
+      },
+      {
+        "backstory": "从小与墨安尘一起长大",
+        "version": 1
+      },
+      {
+        "backstory": "有弟弟",
+        "version": 2
+      },
+      {
+        "backstory": "为陆青禾跑腿",
+        "version": 3
+      }
+    ],
+    "墨宽先": [
+      {
+        "backstory": "曾为墨安尘求医",
+        "version": 0
+      },
+      {
+        "backstory": "穿皮甲可能暗示过去经历",
+        "version": 1
+      },
+      {
+        "backstory": "曾为儿子求医",
+        "version": 2
+      },
+      {
+        "backstory": "警告山里不太平",
+        "version": 3
+      }
+    ],
+    "周小七": [
+      {
+        "backstory": "与墨安尘一起长大",
+        "version": 0
+      },
+      {
+        "backstory": "怵神神鬼鬼",
+        "version": 1
+      },
+      {
+        "backstory": "看过神鬼话本",
+        "version": 2
+      },
+      {
+        "backstory": "对自己的修为有一定自信（曾想与精怪比划）",
+        "version": 3
+      }
+    ],
+    "陆青禾": [
+      {
+        "backstory": "平日很少主动与人接触",
+        "version": 0
+      },
+      {
+        "backstory": "十四年来只认药石医理、从来不信鬼神",
+        "version": 1
+      },
+      {
+        "backstory": "可能略懂医术",
+        "version": 2
+      },
+      {
+        "backstory": "来过小屋数次却未发现佛像",
+        "version": 3
+      }
+    ],
+    "Mo Anchen": [
+      {
+        "backstory": "Cultivation stagnated six years ago",
+        "version": 0
+      },
+      {
+        "backstory": "blood qi流失",
+        "version": 1
+      },
+      {
+        "backstory": "something inside his body consuming cultivation",
+        "version": 2
+      }
+    ],
+    "Lu Qinghe": [
+      {
+        "backstory": "Family has forbidden手札 passed from great-grandfather",
+        "version": 0
+      },
+      {
+        "backstory": "saw mysterious herb three days ago with father",
+        "version": 1
+      }
+    ],
+    "Zhou Xiaoqi": [
+      {
+        "backstory": "Mentioned martial hall's herbalist",
+        "version": 0
+      },
+      {
+        "backstory": "knowledge of weapons",
+        "version": 1
+      }
+    ],
+    "Su Wanning": [
+      {
+        "backstory": "Not detailed in text",
+        "version": 0
+      }
+    ],
+    "陆云臻": [
+      {
+        "backstory": "四十年前退隐",
+        "version": 0
+      },
+      {
+        "backstory": "曾是执法长老",
+        "version": 1
+      },
+      {
+        "backstory": "可能知道禁地秘密",
+        "version": 2
+      }
+    ],
+    "领头弟子": [
+      {
+        "backstory": "认得镇河石",
+        "version": 0
+      },
+      {
+        "backstory": "受过训练",
+        "version": 1
+      }
+    ],
+    "领头黑衣人": [
+      {
+        "backstory": "可能有情报来源",
+        "version": 0
+      },
+      {
+        "backstory": "知道陆云臻身份",
+        "version": 1
+      }
+    ],
+    "其他黑衣人": [
+      {
+        "backstory": "可能有组织背景",
+        "version": 0
+      }
+    ]
+  },
+  "tracking_log": [
+    {
+      "action": "consistency_issue",
+      "issue": "无显著矛盾。苏清晏被家人保护与她自己暗中关注时局，构成表面与内在的张力，是合理的角色设定。",
+      "severity": "无",
+      "timestamp": 0
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无",
+      "severity": "无",
+      "timestamp": 1
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无时间或关系矛盾",
+      "severity": "无",
+      "timestamp": 2
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无明显的矛盾。",
+      "severity": "无",
+      "timestamp": 3
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "No obvious inconsistencies found",
+      "severity": "none",
+      "timestamp": 4
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无",
+      "severity": "无",
+      "timestamp": 5
+    }
+  ]
+}

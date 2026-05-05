@@ -1,0 +1,19 @@
+{
+  "books": {
+    "ac834e1c": {
+      "id": "ac834e1c",
+      "name": "烽火南境",
+      "description": "",
+      "created_at": "2026-02-10 22:10:54",
+      "updated_at": "2026-02-10 22:12:40"
+    },
+    "9b2437c3": {
+      "id": "9b2437c3",
+      "name": "寂灭之主",
+      "description": "",
+      "created_at": "2026-02-10 22:14:17",
+      "updated_at": "2026-02-10 22:14:22"
+    }
+  },
+  "current_book_id": "9b2437c3"
+}

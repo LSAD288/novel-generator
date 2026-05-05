@@ -1,0 +1,861 @@
+{
+  "events": {
+    "E01": {
+      "data": {
+        "event_name": "",
+        "type": "日常",
+        "description": "苏清晏清晨在闺房梳妆，选择素雅簪子，与丫鬟绿萼互动。",
+        "time": "清晨",
+        "location": "镇国公府闺房",
+        "importance": "普通事件，塑造角色日常生活和性格（喜素雅、有主见）。",
+        "participants": [
+          "苏清晏",
+          "绿萼"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "日常",
+      "description": "苏清晏清晨在闺房梳妆，选择素雅簪子，与丫鬟绿萼互动。",
+      "time": "清晨",
+      "location": "镇国公府闺房",
+      "importance": "普通事件，塑造角色日常生活和性格（喜素雅、有主见）。",
+      "participants": [
+        "苏清晏",
+        "绿萼"
+      ],
+      "development_process": {},
+      "timestamp": 0,
+      "consequences": [],
+      "related_events": []
+    },
+    "E02": {
+      "data": {
+        "event_name": "",
+        "type": "回忆/信息揭示",
+        "description": "苏清晏回忆上月二哥与父亲在书房密谈朝堂局势（太子、三皇子之争），以及父亲叹息。",
+        "time": "上月（回忆）",
+        "location": "镇国公府书房",
+        "importance": "重要背景事件，揭示故事核心矛盾（朝堂争斗波及家族）。",
+        "participants": [
+          "二哥",
+          "父亲",
+          "苏清晏（旁听）"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "回忆/信息揭示",
+      "description": "苏清晏回忆上月二哥与父亲在书房密谈朝堂局势（太子、三皇子之争），以及父亲叹息。",
+      "time": "上月（回忆）",
+      "location": "镇国公府书房",
+      "importance": "重要背景事件，揭示故事核心矛盾（朝堂争斗波及家族）。",
+      "participants": [
+        "二哥",
+        "父亲",
+        "苏清晏（旁听）"
+      ],
+      "development_process": {},
+      "timestamp": 1,
+      "consequences": [],
+      "related_events": [
+        "E03"
+      ]
+    },
+    "E03": {
+      "data": {
+        "event_name": "",
+        "type": "对话/信息揭示",
+        "description": "苏清晏与母亲乘马车前往普济寺途中，母亲主动告知家族如履薄冰的处境、皇帝健康问题及皇子争斗。",
+        "time": "出城途中",
+        "location": "马车内",
+        "importance": "关键事件，推动主角认知发展，明确故事主线背景。",
+        "participants": [
+          "苏清晏",
+          "母亲"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "对话/信息揭示",
+      "description": "苏清晏与母亲乘马车前往普济寺途中，母亲主动告知家族如履薄冰的处境、皇帝健康问题及皇子争斗。",
+      "time": "出城途中",
+      "location": "马车内",
+      "importance": "关键事件，推动主角认知发展，明确故事主线背景。",
+      "participants": [
+        "苏清晏",
+        "母亲"
+      ],
+      "development_process": {},
+      "timestamp": 2,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E02",
+        "E04"
+      ]
+    },
+    "E04": {
+      "data": {
+        "event_name": "",
+        "type": "遭遇/对话",
+        "description": "苏清晏在普济寺后山桃林凉亭，遇见书生沈珩，两人就一局残棋展开对话并最终对弈一局。",
+        "time": "午前至午间",
+        "location": "普济寺后山桃林凉亭",
+        "importance": "关键相遇事件，引入重要角色沈珩，为后续剧情发展埋下伏笔。",
+        "participants": [
+          "苏清晏",
+          "沈珩",
+          "晚翠（在场）"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "遭遇/对话",
+      "description": "苏清晏在普济寺后山桃林凉亭，遇见书生沈珩，两人就一局残棋展开对话并最终对弈一局。",
+      "time": "午前至午间",
+      "location": "普济寺后山桃林凉亭",
+      "importance": "关键相遇事件，引入重要角色沈珩，为后续剧情发展埋下伏笔。",
+      "participants": [
+        "苏清晏",
+        "沈珩",
+        "晚翠（在场）"
+      ],
+      "development_process": {},
+      "timestamp": 3,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E03",
+        "E06"
+      ]
+    },
+    "E05": {
+      "data": {
+        "event_name": "",
+        "type": "遭遇/背景",
+        "description": "返回城中朱雀大街时，遇京营骑兵疾驰而过。",
+        "time": "午后",
+        "location": "朱雀大街",
+        "importance": "背景事件，烘托京城紧张局势，呼应前文。",
+        "participants": [
+          "苏清晏",
+          "母亲",
+          "京营骑兵"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "遭遇/背景",
+      "description": "返回城中朱雀大街时，遇京营骑兵疾驰而过。",
+      "time": "午后",
+      "location": "朱雀大街",
+      "importance": "背景事件，烘托京城紧张局势，呼应前文。",
+      "participants": [
+        "苏清晏",
+        "母亲",
+        "京营骑兵"
+      ],
+      "development_process": {},
+      "timestamp": 4,
+      "consequences": [],
+      "related_events": [
+        "E02/E03"
+      ]
+    },
+    "E06": {
+      "data": {
+        "event_name": "",
+        "type": "返回",
+        "description": "苏清晏返回镇国公府，吩咐晚翠准备点心，试图将桃林相遇当作一场梦。",
+        "time": "午后",
+        "location": "镇国公府",
+        "importance": "普通事件，刻画主角试图回归常态的心理，但暗示变化已发生。",
+        "participants": [
+          "苏清晏",
+          "晚翠"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "返回",
+      "description": "苏清晏返回镇国公府，吩咐晚翠准备点心，试图将桃林相遇当作一场梦。",
+      "time": "午后",
+      "location": "镇国公府",
+      "importance": "普通事件，刻画主角试图回归常态的心理，但暗示变化已发生。",
+      "participants": [
+        "苏清晏",
+        "晚翠"
+      ],
+      "development_process": {},
+      "timestamp": 5,
+      "consequences": [],
+      "related_events": [
+        "E04"
+      ]
+    },
+    "E001": {
+      "data": {
+        "event_name": "",
+        "type": "修炼",
+        "description": "墨安尘在墨家院落老槐树下练《踏山诀》拳法，但血炁淤塞，拳头砸树无果，手磨破渗血",
+        "time": "午后到黄昏",
+        "location": "墨家院落",
+        "importance": "普通事件，展示角色状态",
+        "participants": [
+          "墨安尘"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "修炼",
+      "description": "墨安尘在墨家院落老槐树下练《踏山诀》拳法，但血炁淤塞，拳头砸树无果，手磨破渗血",
+      "time": "午后到黄昏",
+      "location": "墨家院落",
+      "importance": "普通事件，展示角色状态",
+      "participants": [
+        "墨安尘"
+      ],
+      "development_process": {},
+      "timestamp": 6,
+      "consequences": [],
+      "related_events": [
+        "E002"
+      ]
+    },
+    "E002": {
+      "data": {
+        "event_name": "",
+        "type": "对话",
+        "description": "三丫推院门来访，传话陆青禾让墨安尘去镇口老槐树商量事情",
+        "time": "黄昏",
+        "location": "墨家院落门口",
+        "importance": "重要转折，引出新剧情",
+        "participants": [
+          "墨安尘",
+          "三丫"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "对话",
+      "description": "三丫推院门来访，传话陆青禾让墨安尘去镇口老槐树商量事情",
+      "time": "黄昏",
+      "location": "墨家院落门口",
+      "importance": "重要转折，引出新剧情",
+      "participants": [
+        "墨安尘",
+        "三丫"
+      ],
+      "development_process": {},
+      "timestamp": 7,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E004",
+        "E001"
+      ]
+    },
+    "E003": {
+      "data": {
+        "event_name": "",
+        "type": "遭遇",
+        "description": "墨宽先扛柴回家，询问墨安尘去向，警告别进山，叹气后进屋",
+        "time": "黄昏",
+        "location": "墨家院落门口",
+        "importance": "普通事件，展示父子关系",
+        "participants": [
+          "墨安尘",
+          "三丫",
+          "墨宽先"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "遭遇",
+      "description": "墨宽先扛柴回家，询问墨安尘去向，警告别进山，叹气后进屋",
+      "time": "黄昏",
+      "location": "墨家院落门口",
+      "importance": "普通事件，展示父子关系",
+      "participants": [
+        "墨安尘",
+        "三丫",
+        "墨宽先"
+      ],
+      "development_process": {},
+      "timestamp": 8,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": []
+    },
+    "E004": {
+      "data": {
+        "event_name": "",
+        "type": "移动",
+        "description": "墨安尘、三丫和周小七在街道相遇，一同前往镇口见陆青禾",
+        "time": "黄昏",
+        "location": "墨石镇街道",
+        "importance": "普通事件，推进剧情",
+        "participants": [
+          "墨安尘",
+          "三丫",
+          "周小七"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "移动",
+      "description": "墨安尘、三丫和周小七在街道相遇，一同前往镇口见陆青禾",
+      "time": "黄昏",
+      "location": "墨石镇街道",
+      "importance": "普通事件，推进剧情",
+      "participants": [
+        "墨安尘",
+        "三丫",
+        "周小七"
+      ],
+      "development_process": {},
+      "timestamp": 9,
+      "consequences": [],
+      "related_events": [
+        "E002"
+      ]
+    },
+    "E1": {
+      "data": {
+        "event_name": "",
+        "type": "训练",
+        "description": "墨安尘在墨家院落老槐树下练《踏山诀》拳法，但血炁滞涩，手受伤",
+        "time": "午后",
+        "location": "墨家院落",
+        "importance": "背景事件",
+        "participants": [
+          "墨安尘"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "训练",
+      "description": "墨安尘在墨家院落老槐树下练《踏山诀》拳法，但血炁滞涩，手受伤",
+      "time": "午后",
+      "location": "墨家院落",
+      "importance": "背景事件",
+      "participants": [
+        "墨安尘"
+      ],
+      "development_process": {},
+      "timestamp": 10,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E2",
+        "E2",
+        "E4",
+        "E2",
+        "upcoming mountain trip"
+      ]
+    },
+    "E2": {
+      "data": {
+        "event_name": "",
+        "type": "传话",
+        "description": "三丫到墨家院落传话，青禾邀请墨安尘去镇口老槐树商量事情",
+        "time": "黄昏",
+        "location": "墨家院落",
+        "importance": "关键事件",
+        "participants": [
+          "墨安尘",
+          "三丫"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "传话",
+      "description": "三丫到墨家院落传话，青禾邀请墨安尘去镇口老槐树商量事情",
+      "time": "黄昏",
+      "location": "墨家院落",
+      "importance": "关键事件",
+      "participants": [
+        "墨安尘",
+        "三丫"
+      ],
+      "development_process": {},
+      "timestamp": 11,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E4",
+        "E1",
+        "E1",
+        "E3",
+        "E1"
+      ]
+    },
+    "E3": {
+      "data": {
+        "event_name": "",
+        "type": "回家",
+        "description": "墨宽先扛柴回家，观察院子练拳痕迹，警告墨安尘不要进山",
+        "time": "黄昏",
+        "location": "墨家院落",
+        "importance": "普通事件",
+        "participants": [
+          "墨宽先",
+          "墨安尘",
+          "三丫"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "回家",
+      "description": "墨宽先扛柴回家，观察院子练拳痕迹，警告墨安尘不要进山",
+      "time": "黄昏",
+      "location": "墨家院落",
+      "importance": "普通事件",
+      "participants": [
+        "墨宽先",
+        "墨安尘",
+        "三丫"
+      ],
+      "development_process": {},
+      "timestamp": 12,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E2",
+        "E4"
+      ]
+    },
+    "E4": {
+      "data": {
+        "event_name": "",
+        "type": "相遇",
+        "description": "周小七在街上遇到墨安尘和三丫，透露也被青禾邀请，三人一起去镇口",
+        "time": "黄昏",
+        "location": "街道",
+        "importance": "普通事件",
+        "participants": [
+          "墨安尘",
+          "三丫",
+          "周小七"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "相遇",
+      "description": "周小七在街上遇到墨安尘和三丫，透露也被青禾邀请，三人一起去镇口",
+      "time": "黄昏",
+      "location": "街道",
+      "importance": "普通事件",
+      "participants": [
+        "墨安尘",
+        "三丫",
+        "周小七"
+      ],
+      "development_process": {},
+      "timestamp": 13,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        }
+      ],
+      "related_events": [
+        "E2",
+        "E3",
+        "E5",
+        "E1",
+        "E5",
+        "E6"
+      ]
+    },
+    "E5": {
+      "data": {
+        "event_name": "",
+        "type": "攻击/受阻",
+        "description": "陆青禾试图重新盖布，被无形力量推飞倒地。周小七全力轰击木门，力道被卸并遭反弹，被墨安尘接住。",
+        "time": "夜晚，E4之后",
+        "location": "荒草地小屋内",
+        "importance": "关键事件（强化危机）",
+        "participants": [
+          "陆青禾",
+          "周小七",
+          "墨安尘",
+          "超自然力量（隐含）"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "攻击/受阻",
+      "description": "陆青禾试图重新盖布，被无形力量推飞倒地。周小七全力轰击木门，力道被卸并遭反弹，被墨安尘接住。",
+      "time": "夜晚，E4之后",
+      "location": "荒草地小屋内",
+      "importance": "关键事件（强化危机）",
+      "participants": [
+        "陆青禾",
+        "周小七",
+        "墨安尘",
+        "超自然力量（隐含）"
+      ],
+      "development_process": {},
+      "timestamp": 14,
+      "consequences": [],
+      "related_events": [
+        "E4",
+        "E6",
+        "E4"
+      ]
+    },
+    "E6": {
+      "data": {
+        "event_name": "",
+        "type": "能力显现",
+        "description": "陆青禾无法点燃火折子（被阴风吹灭），而墨安尘可以轻松点燃。墨安尘轻松拉开了周小七无法撼动的木门。",
+        "time": "夜晚，E5之后",
+        "location": "荒草地小屋内",
+        "importance": "关键转折（揭示主角特殊性）",
+        "participants": [
+          "陆青禾",
+          "墨安尘",
+          "周小七"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "能力显现",
+      "description": "陆青禾无法点燃火折子（被阴风吹灭），而墨安尘可以轻松点燃。墨安尘轻松拉开了周小七无法撼动的木门。",
+      "time": "夜晚，E5之后",
+      "location": "荒草地小屋内",
+      "importance": "关键转折（揭示主角特殊性）",
+      "participants": [
+        "陆青禾",
+        "墨安尘",
+        "周小七"
+      ],
+      "development_process": {},
+      "timestamp": 15,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        },
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 1
+        }
+      ],
+      "related_events": [
+        "E5",
+        "E7",
+        "E4",
+        "E7"
+      ]
+    },
+    "E7": {
+      "data": {
+        "event_name": "",
+        "type": "逃离",
+        "description": "陆青禾拽着周小七跟随墨安尘冲出小屋。三人到达屋外空地，木门再次重重关闭。",
+        "time": "夜晚，E6之后即刻",
+        "location": "从荒草地小屋到屋外空地",
+        "importance": "重要事件（暂时解决危机）",
+        "participants": [
+          "陆青禾",
+          "墨安尘",
+          "周小七"
+        ],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "逃离",
+      "description": "陆青禾拽着周小七跟随墨安尘冲出小屋。三人到达屋外空地，木门再次重重关闭。",
+      "time": "夜晚，E6之后即刻",
+      "location": "从荒草地小屋到屋外空地",
+      "importance": "重要事件（暂时解决危机）",
+      "participants": [
+        "陆青禾",
+        "墨安尘",
+        "周小七"
+      ],
+      "development_process": {},
+      "timestamp": 16,
+      "consequences": [
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 0
+        },
+        {
+          "direct_consequences": [],
+          "indirect_effects": [],
+          "character_impacts": [],
+          "plot_impact": "",
+          "long_term_effects": [],
+          "timestamp": 1
+        }
+      ],
+      "related_events": [
+        "E6",
+        "E6"
+      ]
+    },
+    "E8": {
+      "data": {
+        "event_name": "",
+        "type": "结局",
+        "description": "裂缝闭合，一切恢复平静，尸体残留",
+        "time": "吸入后",
+        "location": "空地和屋脊",
+        "importance": "重要后果",
+        "participants": [],
+        "development_process": {}
+      },
+      "event_name": "",
+      "type": "结局",
+      "description": "裂缝闭合，一切恢复平静，尸体残留",
+      "time": "吸入后",
+      "location": "空地和屋脊",
+      "importance": "重要后果",
+      "participants": [],
+      "development_process": {},
+      "timestamp": 17,
+      "consequences": [],
+      "related_events": []
+    }
+  },
+  "event_sequences": {},
+  "causal_links": [
+    {
+      "cause": "E02",
+      "effect": "E03",
+      "type": "间接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 0
+    },
+    {
+      "cause": "E03",
+      "effect": "E04",
+      "type": "间接（母亲允许去后山转转）",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 1
+    },
+    {
+      "cause": "E04",
+      "effect": "E06",
+      "type": "直接（相遇影响主角心境）",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 2
+    },
+    {
+      "cause": "E02/E03",
+      "effect": "E05",
+      "type": "间接（背景一致）",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 3
+    },
+    {
+      "cause": "E002",
+      "effect": "E004",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 4
+    },
+    {
+      "cause": "E001",
+      "effect": "E002",
+      "type": "间接（背景导致墨安尘状态）",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 5
+    },
+    {
+      "cause": "E2",
+      "effect": "E4",
+      "type": "间接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 6
+    },
+    {
+      "cause": "E1",
+      "effect": "E2",
+      "type": "间接（练拳后传话）",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 7
+    },
+    {
+      "cause": "E1",
+      "effect": "E2",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 8
+    },
+    {
+      "cause": "E2",
+      "effect": "E3",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 9
+    },
+    {
+      "cause": "E3",
+      "effect": "E4",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 10
+    },
+    {
+      "cause": "E4",
+      "effect": "E5",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 11
+    },
+    {
+      "cause": "E5",
+      "effect": "E6",
+      "type": "间接（困境促使尝试）",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 12
+    },
+    {
+      "cause": "E6",
+      "effect": "E7",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 13
+    },
+    {
+      "cause": "E4",
+      "effect": "E1",
+      "type": "direct",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 14
+    },
+    {
+      "cause": "E1",
+      "effect": "E2",
+      "type": "direct",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 15
+    },
+    {
+      "cause": "E1",
+      "effect": "upcoming mountain trip",
+      "type": "direct",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 16
+    },
+    {
+      "cause": "E4",
+      "effect": "E5",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 17
+    },
+    {
+      "cause": "E4",
+      "effect": "E6",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 18
+    },
+    {
+      "cause": "E6",
+      "effect": "E7",
+      "type": "直接",
+      "cause_description": "",
+      "strength": "medium",
+      "timestamp": 19
+    }
+  ],
+  "tracking_log": []
+}

@@ -1,0 +1,201 @@
+{
+  "main_quests": {
+    "MQ01": {
+      "data": {
+        "title": "在家族与朝堂危机中生存与发展",
+        "description": "作为镇国公府小姐，身处政治漩涡边缘，需要应对家族可能面临的危机，并找到自己的位置和道路。",
+        "importance": "核心",
+        "status": "进行中"
+      },
+      "status": "进行中",
+      "progress": 0,
+      "milestones": [],
+      "start_chapter": 0
+    },
+    "MQ001": {
+      "data": {
+        "title": "恢复血炁",
+        "description": "墨安尘试图恢复十岁高烧后消失的血炁，每日练拳但无进展",
+        "importance": "核心目标",
+        "status": "进行中"
+      },
+      "status": "进行中",
+      "progress": 0,
+      "milestones": [],
+      "start_chapter": 0
+    },
+    "Q1": {
+      "data": {
+        "title": "恢复血炁",
+        "description": "墨安尘努力恢复六年前消失的血炁，每日练拳",
+        "importance": "高",
+        "status": "进行中"
+      },
+      "status": "进行中",
+      "progress": 0,
+      "milestones": [],
+      "start_chapter": 0
+    },
+    "MQ1": {
+      "data": {
+        "title": "陆青禾的召集",
+        "description": "陆青禾通过三丫秘密召集墨安尘和周小七，似有要事相商或需要帮助。本章末尾此事因突发异常事件而中断，尚未说明。",
+        "importance": "高（驱动本章情节）",
+        "status": "进行中（被打断）"
+      },
+      "status": "进行中（被打断）",
+      "progress": 0,
+      "milestones": [],
+      "start_chapter": 0
+    },
+    "MQ2": {
+      "data": {
+        "title": "破开法阵",
+        "description": "黑衣人试图破开法阵，打开裂缝",
+        "importance": "高",
+        "status": "部分成功（裂缝裂开但闭合）"
+      },
+      "status": "部分成功（裂缝裂开但闭合）",
+      "progress": 0,
+      "milestones": [],
+      "start_chapter": 0
+    }
+  },
+  "side_quests": {
+    "SQ01": {
+      "data": {
+        "title": "探究沈珩的真实身份与意图",
+        "description": "对偶遇的神秘书生沈珩产生好奇，他虎口的剑茧、对名字的解读都暗示其不简单。",
+        "impact": "高，可能影响主线。",
+        "status": "开启/进行中"
+      },
+      "status": "开启/进行中",
+      "progress": 0,
+      "impact": "高，可能影响主线。",
+      "start_chapter": 0
+    },
+    "SQ001": {
+      "data": {
+        "title": "响应陆青禾的召唤",
+        "description": "墨安尘前往镇口老槐树与陆青禾商量事情",
+        "impact": "可能影响剧情发展",
+        "status": "进行中"
+      },
+      "status": "进行中",
+      "progress": 0,
+      "impact": "可能影响剧情发展",
+      "start_chapter": 0
+    },
+    "Q2": {
+      "data": {
+        "title": "会见青禾",
+        "description": "应青禾邀请，去镇口老槐树商量事情",
+        "impact": "中",
+        "status": "进行中"
+      },
+      "status": "进行中",
+      "progress": 0,
+      "impact": "中",
+      "start_chapter": 0
+    }
+  },
+  "quest_progress": {
+    "MQ01": [],
+    "SQ01": [],
+    "MQ001": [],
+    "SQ001": [],
+    "Q1": [],
+    "Q2": [],
+    "MQ1": [],
+    "MQ2": []
+  },
+  "quest_objectives": {
+    "MQ01": [
+      {
+        "objective": "了解更多朝堂与家族危机的细节。",
+        "is_completed": false,
+        "timestamp": 0
+      },
+      {
+        "objective": "在家族中扮演好应有的角色（目前是乖巧小姐）。",
+        "is_completed": true,
+        "timestamp": 1
+      }
+    ],
+    "SQ01": [
+      {
+        "objective": "与沈珩再次相遇。",
+        "is_completed": false,
+        "timestamp": 0
+      }
+    ],
+    "MQ001": [
+      {
+        "objective": "每日练拳冲开血炁淤塞",
+        "is_completed": false,
+        "timestamp": 0
+      }
+    ],
+    "SQ001": [
+      {
+        "objective": "到达镇口老槐树见陆青禾",
+        "is_completed": false,
+        "timestamp": 0
+      }
+    ],
+    "Q1": [
+      {
+        "objective": "突破血炁滞涩，恢复武者能力",
+        "is_completed": false,
+        "timestamp": 0
+      }
+    ],
+    "Q2": [
+      {
+        "objective": "到达镇口老槐树见青禾",
+        "is_completed": false,
+        "timestamp": 0
+      }
+    ],
+    "MQ1": [
+      {
+        "objective": "在老槐树下与陆青禾会合。（完成）",
+        "is_completed": true,
+        "timestamp": 0
+      },
+      {
+        "objective": "跟随陆青禾前往指定地点（小屋）。（完成）",
+        "is_completed": true,
+        "timestamp": 1
+      },
+      {
+        "objective": "了解陆青禾召集的目的。（未完成）",
+        "is_completed": false,
+        "timestamp": 2
+      },
+      {
+        "objective": "Prepare weapons (bows and short knives) for mountain trip",
+        "is_completed": false,
+        "timestamp": 3
+      },
+      {
+        "objective": "Enter Black Wind Mountain and locate the herb",
+        "is_completed": false,
+        "timestamp": 4
+      },
+      {
+        "objective": "维持灵炁流转，防止异动",
+        "is_completed": false,
+        "timestamp": 5
+      }
+    ],
+    "MQ2": [
+      {
+        "objective": "击杀守阵者，破坏法阵",
+        "is_completed": true,
+        "timestamp": 0
+      }
+    ]
+  },
+  "tracking_log": []
+}

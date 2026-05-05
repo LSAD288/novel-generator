@@ -1,0 +1,731 @@
+{
+  "character_locations": {
+    "苏清晏": [
+      {
+        "location": "镇国公府闺房 -> 马车 -> 普济寺大雄宝殿 -> 后山桃林 -> 马车 -> 镇国公府",
+        "previous_location": "闺房",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "绿萼": [
+      {
+        "location": "镇国公府闺房",
+        "previous_location": "闺房",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "母亲（苏夫人）": [
+      {
+        "location": "镇国公府 -> 马车 -> 普济寺大雄宝殿及禅房 -> 马车 -> 镇国公府",
+        "previous_location": "镇国公府",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "沈珩": [
+      {
+        "location": "普济寺后山桃林凉亭",
+        "previous_location": "桃林（可能在等候友人）",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "晚翠": [
+      {
+        "location": "普济寺后山桃林",
+        "previous_location": "普济寺",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "陈嬷嬷": [
+      {
+        "location": "普济寺后山桃林",
+        "previous_location": "普济寺",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "墨安尘": [
+      {
+        "location": "墨石镇街道前往镇口",
+        "previous_location": "墨家院落",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      },
+      {
+        "location": "墨家院落，后前往镇口老槐树",
+        "previous_location": "墨家院落（练拳位置）",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 1
+      },
+      {
+        "location": "荒草地小屋外空地上",
+        "previous_location": "镇口老槐树下",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 2
+      }
+    ],
+    "三丫": [
+      {
+        "location": "墨石镇街道前往镇口",
+        "previous_location": "墨家院落门口",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      },
+      {
+        "location": "墨家院落，后前往镇口",
+        "previous_location": "家（刘木匠家）",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 1
+      },
+      {
+        "location": "家中（推测）",
+        "previous_location": "镇口老槐树下",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 2
+      }
+    ],
+    "墨宽先": [
+      {
+        "location": "墨家院落屋内",
+        "previous_location": "墨家院落门口",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      },
+      {
+        "location": "墨家院落",
+        "previous_location": "外（可能山里或镇外）",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 1
+      }
+    ],
+    "周小七": [
+      {
+        "location": "墨石镇街道前往镇口",
+        "previous_location": "未知（从别处来）",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      },
+      {
+        "location": "街道",
+        "previous_location": "未知",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 1
+      },
+      {
+        "location": "荒草地小屋外空地上",
+        "previous_location": "镇口老槐树下",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 2
+      }
+    ],
+    "陆青禾": [
+      {
+        "location": "镇口老槐树（提及，未直接出现）",
+        "previous_location": "未知",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      },
+      {
+        "location": "荒草地小屋外空地上",
+        "previous_location": "镇口老槐树下",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 1
+      }
+    ],
+    "Mo Anchen": [
+      {
+        "location": "Mo family courtyard",
+        "previous_location": "abandoned hut and street",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "Lu Qinghe": [
+      {
+        "location": "Unknown (separated from others)",
+        "previous_location": "abandoned hut",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "Zhou Xiaoqi": [
+      {
+        "location": "Street (likely heading home)",
+        "previous_location": "abandoned hut and street",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "Su Wanning": [
+      {
+        "location": "Mo family courtyard",
+        "previous_location": "Inside the house",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "陆云臻": [
+      {
+        "location": "未知（被吸入裂缝）",
+        "previous_location": "石台上",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "领头弟子": [
+      {
+        "location": "石台边缘（死亡）",
+        "previous_location": "桥上",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "艮位弟子": [
+      {
+        "location": "石台上（死亡）",
+        "previous_location": "艮位凹槽",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "其他言真教弟子": [
+      {
+        "location": "裂缝中（被吸入）或死亡",
+        "previous_location": "凹槽或空地",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "领头黑衣人": [
+      {
+        "location": "屋脊上（死亡）",
+        "previous_location": "树林",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ],
+    "其他黑衣人": [
+      {
+        "location": "死亡或逃入树林",
+        "previous_location": "树林",
+        "movement_reason": "",
+        "movement_method": "",
+        "movement_time": "",
+        "actions_at_location": [],
+        "relative_positions": [],
+        "timestamp": 0
+      }
+    ]
+  },
+  "scene_details": {
+    "镇国公府闺房": [
+      {
+        "scene_type": "",
+        "description": "梳妆台、菱花镜、螺钿盒子、妆奁、衣橱。晨光透过茜纱窗。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "马车内": [
+      {
+        "scene_type": "",
+        "description": "车厢，有车窗。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "街市": [
+      {
+        "scene_type": "",
+        "description": "青石板路，卖早点的摊子，卖花的妇人。热闹，有食物香气。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "官道/城外": [
+      {
+        "scene_type": "",
+        "description": "麦田，远山。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "普济寺": [
+      {
+        "scene_type": "",
+        "description": "山门，大雄宝殿，香火鼎盛，青烟缭绕。廊下。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "普济寺后山小路": [
+      {
+        "scene_type": "",
+        "description": "青石小径，两旁竹林，青苔斑驳的石阶。僻静。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "普济寺后山桃林": [
+      {
+        "scene_type": "",
+        "description": "桃花盛开，粉白一片。林中有六角凉亭，内有石桌石凳和一副未下完的棋盘。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "朱雀大街": [
+      {
+        "scene_type": "",
+        "description": "京中街道，青石板路。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "镇国公府大门": [
+      {
+        "scene_type": "",
+        "description": "朱漆大门。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "墨石镇": [
+      {
+        "scene_type": "",
+        "description": "边境小镇，四面是夯土城墙，南边有木门，镇内散落猎户、木匠、铁匠等人家",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      },
+      {
+        "scene_type": "",
+        "description": "坐落在最南角、背靠黑风山脉的小镇，百十来户人家，靠山吃山",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 1
+      }
+    ],
+    "墨家院落": [
+      {
+        "scene_type": "",
+        "description": "镇子东头挨着城墙根的院落，院中有棵老槐树",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      },
+      {
+        "scene_type": "",
+        "description": "镇子东头挨着城墙根，院里有老槐树",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 1
+      }
+    ],
+    "镇口老槐树": [
+      {
+        "scene_type": "",
+        "description": "陆青禾约定的见面地点，具体描述未给出，但应是镇口标志性地点",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      },
+      {
+        "scene_type": "",
+        "description": "镇口位置，青禾约定见面地点",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 1
+      }
+    ],
+    "墨石镇街道": [
+      {
+        "scene_type": "",
+        "description": "青石板路，黄昏时人少，铺子上门板，客栈门口有灯笼",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "街道": [
+      {
+        "scene_type": "",
+        "description": "黄昏的街道，铺子上门板，客栈门口有灯笼",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "镇口老槐树下": [
+      {
+        "scene_type": "",
+        "description": "一棵极老的老槐树，树皮裂得深，树冠遮了大半个路口。树下有石桌和石墩，晚上无人。风起时树叶哗啦响，树影晃动。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "镇子东边的小路": [
+      {
+        "scene_type": "",
+        "description": "一条小路，两旁树荫密不透风，走进去便是一片漆黑。通向一片荒草地。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "荒草地小屋": [
+      {
+        "scene_type": "",
+        "description": "杂草深处的一间破旧小屋。木门歪斜，屋内积满厚灰与碎瓦，屋角满是蛛网，西侧屋顶破洞。屋内存放着一尊被破布遮盖的佛像。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "荒草地小屋外空地": [
+      {
+        "scene_type": "",
+        "description": "小屋外的荒草地，晚风轻拂。",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "abandoned hut": [
+      {
+        "scene_type": "",
+        "description": "A dark, eerie hut with a Buddha statue in the corner, illuminated by a fire striker",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "street": [
+      {
+        "scene_type": "",
+        "description": "A nighttime street with wind and fallen leaves, passing by a lit grocery store",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "Mo family courtyard": [
+      {
+        "scene_type": "",
+        "description": "A courtyard with an old locust tree, shadows, and a quiet atmosphere",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "桥上": [
+      {
+        "scene_type": "",
+        "description": "一座木桥，桥板是老松木，风大雨大，河面铅灰色，雾气散开",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "道馆": [
+      {
+        "scene_type": "",
+        "description": "三间小屋，墙皮剥落，无神像香炉，只有积灰供桌",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "空地石台": [
+      {
+        "scene_type": "",
+        "description": "青黑色石板铺地，刻有符文，中央有圆形石台，高出地面三尺，刻满符文，有八个凹槽",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "树林": [
+      {
+        "scene_type": "",
+        "description": "老槐树下，树木奇形怪状，墨绿色树叶，风大",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ],
+    "屋脊": [
+      {
+        "scene_type": "",
+        "description": "道馆屋顶，青瓦铺成，湿滑",
+        "items": [],
+        "environmental_details": {},
+        "events": [],
+        "character_interactions": [],
+        "time_info": "",
+        "version": 0
+      }
+    ]
+  },
+  "location_history": [
+    {
+      "environment": {
+        "time": "清晨至午后",
+        "weather": "晴朗，有阳光，有风。",
+        "atmosphere": "清晨闺阁静谧温馨，街市热闹，城外开阔，寺庙庄严香火盛，后山桃林幽静唯美，返程时隐含紧张。"
+      },
+      "timestamp": 0
+    },
+    {
+      "environment": {
+        "time": "暮春黄昏",
+        "weather": "晴朗，有风",
+        "atmosphere": "平静略带压抑，夕阳残照，山风轻拂"
+      },
+      "timestamp": 1
+    },
+    {
+      "environment": {
+        "time": "暮春将尽，夏意来临，午后到黄昏",
+        "weather": "晴朗，有风",
+        "atmosphere": "平静但略带压抑，黄昏时光线斜照"
+      },
+      "timestamp": 2
+    },
+    {
+      "environment": {
+        "time": "晚上/夜晚",
+        "weather": "有风",
+        "atmosphere": "夜晚的寂静与神秘。在小屋内时，氛围转为紧张、诡异、阴冷。"
+      },
+      "timestamp": 3
+    },
+    {
+      "environment": {
+        "time": "night",
+        "weather": "windy",
+        "atmosphere": "mysterious, tense, quiet"
+      },
+      "timestamp": 4
+    },
+    {
+      "environment": {
+        "time": "丑时二刻到丑时三刻后，雨夜",
+        "weather": "大雨转小雨，风大",
+        "atmosphere": "阴暗、紧张、死寂"
+      },
+      "timestamp": 5
+    }
+  ],
+  "tracking_log": []
+}

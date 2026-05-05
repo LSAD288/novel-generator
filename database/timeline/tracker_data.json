@@ -1,0 +1,355 @@
+{
+  "timeline_events": [
+    {
+      "time": "春朝，清晨至午后",
+      "description": "AI识别的时间点: 春朝，清晨至午后",
+      "source": "",
+      "position": 0
+    },
+    {
+      "time": "午后",
+      "description": "时间流逝: 晨光 -> 午后 (约半日) - 从清晨梳妆出发，到普济寺上香、后山下棋，最后返回城中。",
+      "source": "",
+      "position": 1
+    },
+    {
+      "time": "当年春",
+      "description": "时间流逝: 上年 -> 当年春 (数月) - 自打过年后，母亲总带主角去上香。",
+      "source": "",
+      "position": 2
+    },
+    {
+      "time": "晨光（清晨）",
+      "description": "[1] 苏清晏在闺房梳妆",
+      "source": "",
+      "position": 3
+    },
+    {
+      "time": "上月（回忆）",
+      "description": "[2] 回忆上月二哥与父亲书房密谈",
+      "source": "",
+      "position": 4
+    },
+    {
+      "time": "昨日（回忆）",
+      "description": "[3] 回忆昨日母亲叮嘱",
+      "source": "",
+      "position": 5
+    },
+    {
+      "time": "清晨出发",
+      "description": "[4] 与母亲乘马车前往普济寺",
+      "source": "",
+      "position": 6
+    },
+    {
+      "time": "出城途中",
+      "description": "[5] 马车中母亲告知家族处境",
+      "source": "",
+      "position": 7
+    },
+    {
+      "time": "午前",
+      "description": "[6] 到达普济寺，上香",
+      "source": "",
+      "position": 8
+    },
+    {
+      "time": "午前至午间",
+      "description": "[7] 苏清晏前往后山桃林，遇见沈珩并下棋",
+      "source": "",
+      "position": 9
+    },
+    {
+      "time": "午间",
+      "description": "[8] 返回寺中与母亲会合",
+      "source": "",
+      "position": 10
+    },
+    {
+      "time": "午后",
+      "description": "[9] 乘车返回，路上见京营骑兵",
+      "source": "",
+      "position": 11
+    },
+    {
+      "time": "午后",
+      "description": "[10] 回到镇国公府",
+      "source": "",
+      "position": 12
+    },
+    {
+      "time": "黄昏",
+      "description": "AI识别的时间点: 黄昏",
+      "source": "",
+      "position": 13
+    },
+    {
+      "time": "黄昏",
+      "description": "时间流逝: 午后 -> 黄昏 (几个时辰) - 墨安尘练拳，事件从练拳到出门",
+      "source": "",
+      "position": 14
+    },
+    {
+      "time": "午后",
+      "description": "[1] 墨安尘在墨家院落练拳",
+      "source": "",
+      "position": 15
+    },
+    {
+      "time": "黄昏初",
+      "description": "[2] 三丫来访传话",
+      "source": "",
+      "position": 16
+    },
+    {
+      "time": "黄昏",
+      "description": "[3] 墨宽先回家并警告",
+      "source": "",
+      "position": 17
+    },
+    {
+      "time": "黄昏末",
+      "description": "[4] 墨安尘、三丫、周小七前往镇口",
+      "source": "",
+      "position": 18
+    },
+    {
+      "time": "黄昏",
+      "description": "AI识别的时间点: 黄昏",
+      "source": "",
+      "position": 19
+    },
+    {
+      "time": "黄昏",
+      "description": "时间流逝: 午后 -> 黄昏 (约几小时) - 墨安尘练拳，到三丫传话，墨宽先回家，前往镇口",
+      "source": "",
+      "position": 20
+    },
+    {
+      "time": "现在（十六岁）",
+      "description": "时间流逝: 六年前（十岁时） -> 现在（十六岁） (六年) - 血炁消失后，墨安尘坚持练拳",
+      "source": "",
+      "position": 21
+    },
+    {
+      "time": "午后",
+      "description": "[1] 墨安尘在院子练拳",
+      "source": "",
+      "position": 22
+    },
+    {
+      "time": "黄昏",
+      "description": "[2] 三丫传话青禾邀请",
+      "source": "",
+      "position": 23
+    },
+    {
+      "time": "黄昏",
+      "description": "[3] 墨宽先回家并警告",
+      "source": "",
+      "position": 24
+    },
+    {
+      "time": "黄昏",
+      "description": "[4] 周小七相遇，三人去镇口",
+      "source": "",
+      "position": 25
+    },
+    {
+      "time": "夜晚（具体时辰不详）",
+      "description": "AI识别的时间点: 夜晚（具体时辰不详）",
+      "source": "",
+      "position": 26
+    },
+    {
+      "time": "夜晚（结束）",
+      "description": "时间流逝: 夜晚（起始） -> 夜晚（结束） (一段连续的夜间时间，可能一两个小时。) - 从老槐树下会面，到前往小屋、探索、发生异常、逃离。事件连续发生，无明显时间跳跃。",
+      "source": "",
+      "position": 27
+    },
+    {
+      "time": "夜晚",
+      "description": "[1] 陆青禾在老槐树下等待。",
+      "source": "",
+      "position": 28
+    },
+    {
+      "time": "夜晚（稍晚）",
+      "description": "[2] 三丫带墨安尘、周小七到来，会面，三丫离开。",
+      "source": "",
+      "position": 29
+    },
+    {
+      "time": "夜晚，序列2之后",
+      "description": "[3] 陆青禾带领两人前往东边荒草地小屋。",
+      "source": "",
+      "position": 30
+    },
+    {
+      "time": "夜晚，序列3之后",
+      "description": "[4] 三人进入小屋探索，发现佛像。",
+      "source": "",
+      "position": 31
+    },
+    {
+      "time": "夜晚，序列4之后即刻",
+      "description": "[5] 陆青禾掀开佛像破布，触发超自然现象（降温、关门）。",
+      "source": "",
+      "position": 32
+    },
+    {
+      "time": "夜晚，序列5之后",
+      "description": "[6] 陆青禾被无形力量推倒，周小七攻击木门被弹回。",
+      "source": "",
+      "position": 33
+    },
+    {
+      "time": "夜晚，序列6之后",
+      "description": "[7] 墨安尘点燃火折子并打开木门。",
+      "source": "",
+      "position": 34
+    },
+    {
+      "time": "夜晚，序列7之后即刻",
+      "description": "[8] 三人逃离小屋至屋外空地，屋门再次关闭。",
+      "source": "",
+      "position": 35
+    },
+    {
+      "time": "tonight (after events in hut and before next morning)",
+      "description": "AI识别的时间点: tonight (after events in hut and before next morning)",
+      "source": "",
+      "position": 36
+    },
+    {
+      "time": "tonight",
+      "description": "时间流逝: three days ago -> tonight (three days) - Lu Qinghe discovers herb and plans to seek help",
+      "source": "",
+      "position": 37
+    },
+    {
+      "time": "tonight (end of scene)",
+      "description": "时间流逝: tonight (start of scene) -> tonight (end of scene) (a few hours) - Conversation in hut, walk home, and home interaction",
+      "source": "",
+      "position": 38
+    },
+    {
+      "time": "three days ago",
+      "description": "[1] Lu Qinghe and father see herb in mountain",
+      "source": "",
+      "position": 39
+    },
+    {
+      "time": "tonight",
+      "description": "[2] Lu Qinghe brings Mo Anchen and Zhou Xiaoqi to abandoned hut, reveals herb",
+      "source": "",
+      "position": 40
+    },
+    {
+      "time": "tonight, after sequence 2",
+      "description": "[3] Group leaves hut and walks home",
+      "source": "",
+      "position": 41
+    },
+    {
+      "time": "tonight, after sequence 3",
+      "description": "[4] Mo Anchen interacts with mother in courtyard",
+      "source": "",
+      "position": 42
+    },
+    {
+      "time": "丑时三刻后，裂缝闭合后",
+      "description": "AI识别的时间点: 丑时三刻后，裂缝闭合后",
+      "source": "",
+      "position": 43
+    },
+    {
+      "time": "丑时三刻",
+      "description": "时间流逝: 丑时二刻 -> 丑时三刻 (约两刻钟) - 雾散，换防，黑衣人袭击",
+      "source": "",
+      "position": 44
+    },
+    {
+      "time": "丑时二刻",
+      "description": "[1] 雾散，陆云臻在桥上等待换防",
+      "source": "",
+      "position": 45
+    },
+    {
+      "time": "丑时二刻后",
+      "description": "[2] 言真教弟子换防，交接镇河石",
+      "source": "",
+      "position": 46
+    },
+    {
+      "time": "丑时三刻",
+      "description": "[3] 丑时三刻，雨小风大，艮位弟子异常",
+      "source": "",
+      "position": 47
+    },
+    {
+      "time": "丑时三刻后",
+      "description": "[4] 黑衣人出现并袭击法阵",
+      "source": "",
+      "position": 48
+    },
+    {
+      "time": "袭击后",
+      "description": "[5] 陆云臻介入，杀死黑衣人",
+      "source": "",
+      "position": 49
+    },
+    {
+      "time": "战斗后",
+      "description": "[6] 裂缝裂开，弟子和陆云臻被吸入",
+      "source": "",
+      "position": 50
+    },
+    {
+      "time": "吸入后",
+      "description": "[7] 裂缝闭合，恢复平静",
+      "source": "",
+      "position": 51
+    }
+  ],
+  "current_time_point": "丑时三刻后，裂缝闭合后",
+  "tracking_log": [
+    {
+      "action": "consistency_issue",
+      "issue": "时间标记多为相对描述（晨光、午后），无具体日期或钟点，整体流畅无矛盾。",
+      "severity": "无",
+      "timestamp": 0
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无时间矛盾",
+      "severity": "无",
+      "timestamp": 1
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无时间矛盾",
+      "severity": "无",
+      "timestamp": 2
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "时间描述均为“夜晚”，没有具体时辰标记，但事件顺序清晰合理，无矛盾。",
+      "severity": "无",
+      "timestamp": 3
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "No time contradictions found",
+      "severity": "none",
+      "timestamp": 4
+    },
+    {
+      "action": "consistency_issue",
+      "issue": "无",
+      "severity": "无",
+      "timestamp": 5
+    }
+  ]
+}
