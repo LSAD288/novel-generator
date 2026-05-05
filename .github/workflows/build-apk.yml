@@ -59,9 +59,17 @@ jobs:
         echo "=== Buildozer spec ==="
         cat buildozer.spec | head -50
         
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
     - name: Build APK
       run: |
-        export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+        export JAVA_HOME=$JAVA_HOME_17_X64
+        echo "JAVA_HOME=$JAVA_HOME"
+        java -version
         export ANDROIDSDK="$HOME/.buildozer/android/platform/android-sdk"
         export ANDROIDNDK="$HOME/.buildozer/android/platform/android-ndk-r25b"
         export ANDROIDAPI="33"
