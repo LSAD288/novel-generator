@@ -7,9 +7,6 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,12 +20,27 @@ jobs:
       with:
         python-version: '3.10'
         
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Fix JAVA_HOME
+      run: |
+        echo "JAVA_HOME_17_X64=$JAVA_HOME_17_X64"
+        echo "JAVA_HOME=$JAVA_HOME"
+        echo "JAVA_HOME=$JAVA_HOME_17_X64" >> $GITHUB_ENV
+        echo "PATH=$JAVA_HOME_17_X64/bin:$PATH" >> $GITHUB_ENV
+        java -version
+        which java
+        
     - name: Install system dependencies
       run: |
         sudo apt-get update || true
         sudo apt-get install -y --no-install-recommends \
           python3-pip python3-venv git unzip wget \
-          openjdk-17-jdk autoconf automake libtool \
+          autoconf automake libtool \
           pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev \
           libtinfo5 cmake libffi-dev libssl-dev \
           libsqlite3-dev libjpeg-dev libpng-dev \
@@ -52,30 +64,15 @@ jobs:
           
     - name: Check project structure
       run: |
+        echo "=== JAVA_HOME=$JAVA_HOME ==="
+        java -version
         echo "=== Project files ==="
-        ls -la
-        echo "=== Python files ==="
         ls -la *.py 2>/dev/null || echo "No .py files in root"
-        echo "=== Buildozer spec ==="
-        cat buildozer.spec | head -50
-        
-    - name: Setup Java
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
         
     - name: Build APK
       run: |
-        export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
-        export PATH=$JAVA_HOME/bin:$PATH
         echo "JAVA_HOME=$JAVA_HOME"
         java -version
-        which java
-        export ANDROIDSDK="$HOME/.buildozer/android/platform/android-sdk"
-        export ANDROIDNDK="$HOME/.buildozer/android/platform/android-ndk-r25b"
-        export ANDROIDAPI="33"
-        export ANDROIDMINAPI="21"
         buildozer android debug 2>&1 | tee build.log
       timeout-minutes: 90
       continue-on-error: true
@@ -90,7 +87,7 @@ jobs:
         
     - name: Check APK exists
       run: |
-        if [ -f bin/*.apk ]; then
+        if ls bin/*.apk 1>/dev/null 2>&1; then
           echo "APK built successfully!"
           ls -lh bin/*.apk
         else
