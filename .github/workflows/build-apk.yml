@@ -3,13 +3,12 @@ name: Build Android APK
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     
     steps:
     - name: Checkout code
@@ -26,14 +25,18 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Fix JAVA_HOME
+    - name: Fix JAVA_HOME with symlink
       run: |
         echo "JAVA_HOME_17_X64=$JAVA_HOME_17_X64"
-        echo "JAVA_HOME=$JAVA_HOME"
+        echo "Current JAVA_HOME=$JAVA_HOME"
+        if [ -d "/usr/lib/jvm/java-17-openjdk-amd64" ]; then
+          sudo rm -rf /usr/lib/jvm/java-17-openjdk-amd64
+        fi
+        sudo ln -sf "$JAVA_HOME_17_X64" /usr/lib/jvm/java-17-openjdk-amd64
         echo "JAVA_HOME=$JAVA_HOME_17_X64" >> $GITHUB_ENV
         echo "PATH=$JAVA_HOME_17_X64/bin:$PATH" >> $GITHUB_ENV
+        ls -la /usr/lib/jvm/java-17-openjdk-amd64/bin/java
         java -version
-        which java
         
     - name: Install system dependencies
       run: |
@@ -62,20 +65,24 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildozer-
           
-    - name: Check project structure
-      run: |
-        echo "=== JAVA_HOME=$JAVA_HOME ==="
-        java -version
-        echo "=== Project files ==="
-        ls -la *.py 2>/dev/null || echo "No .py files in root"
-        
-    - name: Build APK
+    - name: Verify environment
       run: |
         echo "JAVA_HOME=$JAVA_HOME"
         java -version
+        javac -version
+        which java
+        ls -la /usr/lib/jvm/ | grep java-17
+        echo "=== Project files ==="
+        ls -la *.py 2>/dev/null || echo "No .py files"
+        
+    - name: Build APK
+      run: |
+        export JAVA_HOME=$JAVA_HOME_17_X64
+        export PATH=$JAVA_HOME/bin:$PATH
+        echo "Building with JAVA_HOME=$JAVA_HOME"
+        java -version
         buildozer android debug 2>&1 | tee build.log
       timeout-minutes: 90
-      continue-on-error: true
       
     - name: Upload build log
       uses: actions/upload-artifact@v4
@@ -91,8 +98,8 @@ jobs:
           echo "APK built successfully!"
           ls -lh bin/*.apk
         else
-          echo "APK not found. Checking build log..."
-          tail -100 build.log
+          echo "APK not found. Last 200 lines of build log:"
+          tail -200 build.log
           exit 1
         fi
       
