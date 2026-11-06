@@ -1,0 +1,18 @@
+{
+  "name": "烽火南境 · 写作台",
+  "short_name": "烽火南境",
+  "description": "本地 AI 小说写作台：章节管理、AI 续写、人物关系图、大纲与取名",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#efede6",
+  "theme_color": "#a5382e",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

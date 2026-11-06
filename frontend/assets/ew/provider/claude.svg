@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Claude 星芒（简化八芒，Anthropic 珊瑚色） -->
+  <g fill="#D97757">
+    <g transform="translate(12,12)">
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(45)"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(90)"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(135)"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(180)"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(225)"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(270)"/>
+      <rect x="-1.4" y="-11" width="2.8" height="8.2" rx="1.4" transform="rotate(315)"/>
+      <circle cx="0" cy="0" r="2.4"/>
+    </g>
+  </g>
+</svg>

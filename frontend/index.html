@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-color-mode="day">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>烽火南境 · 小说生成器</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#a5382e">
+<meta name="application-name" content="烽火南境">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="烽火南境">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-theme="paper" data-section="writer" data-scene="none" data-paper="plain" data-scene-scope="global">
+<div id="sceneBg" aria-hidden="true"><i></i><b></b></div>
+
+<!-- ================= 桌面端（Windows 应用）自绘标题栏 ================= -->
+<div class="d-bar" id="dBar" hidden>
+  <div class="d-brand">
+    <span class="d-logo">烽</span>
+    <div class="d-name"><b>烽火南境</b><em>Novel Studio · 桌面版</em></div>
+  </div>
+  <nav class="d-menu" id="dMenu">
+    <button data-dnav="writer" class="on">写作台</button>
+    <button data-dnav="library">书架</button>
+    <button data-dnav="ai">AI 工坊</button>
+    <button data-dnav="review">自检</button>
+    <button data-dnav="settings">设置</button>
+  </nav>
+  <div class="d-drag"></div>
+  <div class="d-right">
+    <span class="d-model" id="dModel">deepseek-flash</span>
+    <button class="d-win" id="dMin" title="最小化">—</button>
+    <button class="d-win" id="dMax" title="最大化 / 还原">□</button>
+    <button class="d-win close" id="dClose" title="关闭">×</button>
+  </div>
+</div>
+
+<!-- ================= 站点导航 ================= -->
+<header class="ml-topbar">
+  <a class="ml-brand" href="#" data-nav="writer">
+    <span class="ml-mark"><img src="assets/logo.png" alt="" width="36" height="36"></span>
+    <span>烽火南境 <small>Novel Studio</small></span>
+  </a>
+  <nav class="ml-nav" aria-label="功能导航">
+    <a href="#" data-nav="writer" class="on">写作台</a>
+    <a href="#" data-nav="library">书架</a>
+    <a href="#" data-nav="ai">AI 工坊</a>
+    <a href="#" data-nav="review">自检</a>
+    <a href="#" data-nav="settings">设置</a>
+  </nav>
+  <div class="ml-account">
+    <button class="ml-user-chip" id="modelChip" title="当前模型">deepseek-flash</button>
+  </div>
+</header>
+
+<!-- ================= 顶栏 ================= -->
+<header id="topbar">
+  <div class="book-switch">
+    <button id="bookSwitchBtn" title="切换书籍">
+      <div class="book-cover" id="bookCoverChar">书</div>
+      <div class="bt"><b id="bookName">未命名</b><span id="bookMeta">暂无书籍</span></div>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color:var(--muted)"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  </div>
+  <div class="top-right">
+    <button class="chip" id="gsBtn" title="全局搜索（Ctrl+K）">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <span class="chip-label">搜索</span>
+    </button>
+    <button type="button" class="chip save" id="saveChip"><span class="dot" id="saveDot"></span><span id="saveText" class="chip-label">尚未落存</span></button>
+    <button class="chip" id="pomoChip" title="番茄钟">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+      <span class="num" id="pomoLabel">番茄钟</span>
+    </button>
+    <button class="chip" id="lockChipBtn" title="码字锁">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <span class="chip-label">码字锁</span>
+    </button>
+    <button class="chip" id="bgChip" title="背景与主题">
+      <span class="dot" style="background:var(--seal)"></span><span id="themeLabel" class="chip-label">背景</span>
+    </button>
+    <button class="chip" id="focusChip" title="专注模式">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>
+      <span class="chip-label">专注</span>
+    </button>
+    <button class="chip pane-toggle" id="leftToggle" title="收起目录" aria-pressed="false">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 8 12l7 7"/></svg>
+    </button>
+    <button class="chip pane-toggle" id="rightToggle" title="收起侧栏" aria-pressed="false">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <button class="avatar" id="settingsBtn" title="设置">设</button>
+  </div>
+</header>
+
+<!-- ================= 手机端：顶栏 + 底部标签 ================= -->
+<div class="m-bar" id="mBar" hidden>
+  <button class="m-icon" id="mTocBtn" aria-label="目录">☰</button>
+  <div class="m-title" id="mTitle"><b id="mBookName">未命名</b><span id="mChapterName">未选择章节</span></div>
+  <button class="m-icon" id="mMoreBtn" aria-label="更多">⋯</button>
+</div>
+<nav class="m-tabs" id="mTabs" hidden>
+  <button class="m-tab on" data-mtab="write"><b>✎</b><span>写作</span></button>
+  <button class="m-tab" data-mtab="toc"><b>≡</b><span>目录</span></button>
+  <button class="m-tab" data-mtab="ai"><b>✧</b><span>搭子</span></button>
+  <button class="m-tab" data-mtab="world"><b>◈</b><span>设定</span></button>
+  <button class="m-tab" data-mtab="more"><b>⋯</b><span>更多</span></button>
+</nav>
+<div class="m-more" id="mMoreSheet" hidden>
+  <button id="mSheetBook">书籍</button>
+  <button id="mSheetBookSettings">书籍设置</button>
+  <button id="mSheetStudio">AI 工坊</button>
+  <button id="mSheetShelf">书架</button>
+  <button id="mSheetSettings">设置</button>
+  <button id="mSheetTypo">排版 Aa</button>
+  <button id="mSheetUndo">撤销一步</button>
+  <button id="mSheetRedo">重做一步</button>
+  <button id="mSheetFind">查找</button>
+  <button id="mSheetFocus">专注模式</button>
+  <button id="mSheetPhone">手机排版</button>
+  <button id="mSheetSnap">立即存稿</button>
+  <button id="mSheetWriteSet">写作设置</button>
+  <button id="mSheetDictate">听写</button>
+  <button id="mSheetCanvas">写作画布</button>
+  <button id="mSheetImport">导入章节</button>
+  <button id="mSheetExport">导出</button>
+</div>
+
+<div id="layout">
+  <!-- ================= 左栏 ================= -->
+  <aside id="left">
+    <div class="m-left-tabs" id="mLeftTabs">
+      <button data-ltab="toc" class="on">章节目录</button>
+      <button data-ltab="book">书籍</button>
+    </div>
+    <div class="left-scroll scroll-thin">
+      <div class="book-card">
+        <div class="cover" id="lcCover">书</div>
+        <div style="display:flex;flex-direction:column;min-width:0;flex:1">
+          <div class="bt"><b id="lcName">未命名</b><span class="tag" id="lcTag">未设置题材</span></div>
+          <div class="stat">全书 <b id="bookWords">0</b> 字</div>
+        </div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-head">
+          <span class="goal-title">今日写作</span>
+          <button type="button" class="mini-btn" id="dailyGoalSettings">设置</button>
+        </div>
+        <div class="goal-body">
+          <div class="ring">
+            <svg width="74" height="74">
+              <circle cx="37" cy="37" r="31" fill="none" stroke="var(--card-2)" stroke-width="7"/>
+              <circle id="ringFg" cx="37" cy="37" r="31" fill="none" stroke="var(--seal)" stroke-width="7"
+                stroke-linecap="round" stroke-dasharray="194.8" stroke-dashoffset="194.8" style="transition:stroke-dashoffset .5s"/>
+            </svg>
+            <div class="rv"><div><b id="ringPct">0%</b><span>今日</span></div></div>
+          </div>
+          <div class="goal-info">
+            <div class="row"><span>今日码字</span><b id="todayWords">0</b></div>
+            <div class="row"><span>每日目标</span><b id="dailyGoalValue">3,000</b></div>
+            <div class="row"><span>码字速率</span><b><span id="rateWords">0</span> 字/分</b></div>
+            <div class="week-dots" id="weekDots"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="tocSearch" placeholder="搜索章节标题…" autocomplete="off" spellcheck="false" readonly>
+      </div>
+
+      <div class="toc-head">
+        <span class="tt">目录</span>
+        <div class="ops">
+          <button class="icon-btn" id="importChapterBtn" title="导入章节（txt / md）">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v3h16v-3"/></svg>
+          </button>
+          <button class="icon-btn" id="newVolumeBtn" title="新建分卷">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h9M4 12h9M4 18h6"/><path d="M17 10v8M13 14h8"/></svg>
+          </button>
+          <button class="icon-btn" id="tocExpandBtn" title="展开/收起全部">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="tocTree"></div>
+
+      <button class="vol-add" id="newChapterBtn" aria-label="新建章节">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        新建章节
+      </button>
+    </div>
+    <div class="left-foot">
+      <button id="snapBtn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+        历史快照
+      </button>
+      <button id="trashBtn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>
+        回收站 <span class="cnt" id="trashCnt">0</span>
+      </button>
+      <button id="exportBtn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v3h16v-3"/></svg>
+        导出
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= 中栏 ================= -->
+  <section id="center">
+    <div class="crumb">
+      <b id="crumbBook">未命名</b><span class="sep">/</span><span id="crumbVol">—</span><span class="sep">/</span><b id="crumbCh">未选择章节</b>
+      <span style="margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--faint)">
+        <span class="kbd">⌘S</span> 保存 <span class="kbd">⌘/</span> 快捷键
+      </span>
+    </div>
+
+    <div class="paper-wrap scroll-thin" id="paperWrap">
+      <div class="paper">
+        <div class="lock-banner" id="lockBanner">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <span>码字锁已开启 · 目标 <b id="lockGoalT">500</b> 字，还差 <b id="lockLeftT">500</b> 字解锁，加油！</span>
+          <button class="mini-btn seal" id="lockCancel" style="margin-left:auto">解除</button>
+        </div>
+        <textarea class="ch-title" id="chTitle" rows="1" placeholder="章节标题" spellcheck="false" autocomplete="off"></textarea>
+        <div class="title-rule"></div>
+        <div class="ed-stack">
+          <div class="ed-layer" id="backdrop" aria-hidden="true"></div>
+          <textarea class="ed-layer" id="input" spellcheck="false" placeholder=""></textarea>
+          <div class="ed-empty" id="edEmpty">
+            <div class="l1">动笔吧！</div>
+            <div class="l2"></div>
+            <div class="l3">支持自动保存 · 每 5 分钟留存一份快照</div>
+          </div>
+        </div>
+        <div class="watermark">烽火南境 · 写作台</div>
+
+        <div class="find-bar" id="findBar">
+          <input id="findInput" placeholder="查找正文…">
+          <span class="cnt" id="findCnt">0/0</span>
+          <button class="icon-btn" id="findPrev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg></button>
+          <button class="icon-btn" id="findNext"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="icon-btn" id="findClose"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="float-tools" id="floatTools">
+      <button class="ft ft-toggle" id="ftToggle" title="收起工具栏" aria-expanded="true">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <span class="vdiv" id="ftToggleDiv"></span>
+      <button class="ft" id="typoBtn" title="排版"><b>Aa</b> 排版</button>
+      <button class="ft" id="findBtn" title="查找 (Ctrl+F)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        查找
+      </button>
+      <button class="ft" id="aiBtn" title="AI 写作搭子">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+        AI
+      </button>
+      <span class="vdiv"></span>
+      <button class="ft ft-cat" data-cat="edit" title="编辑：打字机 / 撤销 / 重做">编辑
+        <svg class="cvt" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <button class="ft ft-cat" data-cat="view" title="视图：手机排版 / 写作画布">视图
+        <svg class="cvt" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <button class="ft ft-cat" data-cat="more" title="工具：存稿 / 设置 / 听写">工具
+        <svg class="cvt" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="ft-handle" id="ftHandle" role="button" tabindex="0" title="展开工具栏" aria-label="展开工具栏">
+      <span class="fh-grip"></span>
+      <span class="fh-txt">工具栏</span>
+    </div>
+
+    <!-- 左右栏收起后，贴边的展开把手（箭头图标） -->
+    <div class="pane-handle ph-l" id="leftHandle" role="button" tabindex="0" title="展开目录" aria-label="展开目录">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </div>
+    <div class="pane-handle ph-r" id="rightHandle" role="button" tabindex="0" title="展开侧栏" aria-label="展开侧栏">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 8 12l7 7"/></svg>
+    </div>
+
+    <div class="ft-drawer" id="ftDrawer" hidden>
+      <div class="ft-panel" data-cat="edit">
+        <button class="ft" id="twBtn" title="打字机模式：光标恒居屏中">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M6 12h12M9 17h6"/></svg>
+          打字机
+        </button>
+        <button class="ft" id="undoBtn" title="撤销 (Ctrl+Z)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7H5v-4"/><path d="M5 7a8 8 0 1 1 1.5 9"/></svg>
+          撤销
+        </button>
+        <button class="ft" id="redoBtn" title="重做 (Ctrl+Y / Ctrl+Shift+Z)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h4v-4"/><path d="M19 7a8 8 0 1 0-1.5 9"/></svg>
+          重做
+        </button>
+      </div>
+      <div class="ft-panel" data-cat="view" hidden>
+        <button class="ft" id="phoneBtn" title="手机排版预览">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+          手机排版
+        </button>
+        <button class="ft" id="canvasBtn" title="写作画布（自由卡片 / 连线 / 手绘）">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3v4"/></svg>
+          写作画布
+        </button>
+      </div>
+      <div class="ft-panel" data-cat="more" hidden>
+        <button class="ft" id="snapNowBtn" title="手动存稿（留一份快照）">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+          存稿
+        </button>
+        <button class="ft" id="writeSetBtn" title="写作设置（模式 / 音效 / 排版）">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          设置
+        </button>
+        <button class="ft" id="dictateBtn" title="听写（语音输入）">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg>
+          听写
+        </button>
+      </div>
+    </div>
+
+    <div id="statusbar">
+      <span class="st">本章 <b id="stChWords">0</b> 字</span>
+      <span class="st">今日 <b id="stToday">0</b> 字</span>
+      <span class="st">速率 <b id="stRate">0</b> 字/分</span>
+      <span class="st">目标 <span class="goal-bar"><i id="sbGoalBar" style="width:0%"></i></span> <b id="sbGoalPct">0%</b></span>
+      <span class="st" id="lockChip"></span>
+      <span class="spacer"></span>
+      <span class="st" id="stSensitive"></span>
+      <span class="st kbd-hint" style="cursor:pointer" id="scHint"><span class="kbd">⌘</span><span class="kbd">/</span> 快捷键</span>
+    </div>
+  </section>
+
+  <!-- ================= 右栏 ================= -->
+  <aside id="right">
+    <div class="right-tabs">
+      <button class="rtab on" data-tab="note">便签</button>
+      <button class="rtab" data-tab="world">设定</button>
+      <button class="rtab" data-tab="ai">灵感</button>
+      <button class="rtab" data-tab="check">自检</button>
+      <button class="rtab" data-tab="companion">搭子</button>
+    </div>
+    <div class="right-body scroll-thin" id="rightBody">
+
+      <!-- 便签 -->
+      <div data-pane="note">
+        <div class="rcard">
+          <div class="rh"><span class="tt">本章大纲</span><button class="mini-btn" id="outlineSaveBtn">保存</button></div>
+          <textarea class="note-area" id="outlineNote" placeholder="这一章要写什么：起、承、转、钩子…"></textarea>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">伏笔清单</span><span class="sub" id="foreshadowSub">0 待回收</span></div>
+          <div id="foreshadowList"></div>
+          <button class="mini-btn" id="foreshadowAdd" style="margin-top:8px">＋ 记一笔</button>
+        </div>
+        <div class="rcard writer-notes-card">
+          <div class="rh"><span class="tt">随手便签</span><span class="sub">自动保存</span></div>
+          <textarea class="note-area" id="scratchNote" placeholder="写给自己看的：卡壳的点、待查的资料、下一章的念头…"></textarea>
+        </div>
+      </div>
+
+      <!-- 设定 -->
+      <div data-pane="world" hidden>
+        <div class="rcard">
+          <div class="rh"><span class="tt">人物设定</span>
+            <span class="ops" style="display:flex;gap:6px">
+              <button class="mini-btn" id="worldCanvasBtn" title="写作画布（自由卡片 / 连线 / 手绘）">画布</button>
+              <button class="mini-btn" id="addCharBtn">＋人物</button>
+              <button class="mini-btn" id="worldRefresh">刷新</button>
+            </span>
+          </div>
+          <div id="worldList"></div>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">世界观</span><span class="sub">可编辑 · 自动保存</span></div>
+          <textarea class="note-area" id="worldText" placeholder="世界背景、地理势力、力量体系、社会风俗…"></textarea>
+          <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:8px">
+            <button class="mini-btn" id="worldGen">AI 生成</button>
+            <button class="mini-btn primary" id="worldSave">保存</button>
+          </div>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">核心概念</span><span class="sub" id="conceptSub">项目设定</span></div>
+          <div class="ai-result" id="conceptBox" style="max-height:200px">尚未生成核心概念</div>
+          <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:8px">
+            <button class="mini-btn" id="conceptGen">AI 生成概念</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 灵感 -->
+      <div data-pane="ai" hidden>
+        <div class="rcard">
+          <div class="rh"><span class="tt serif">灵感 · 创作工具</span><span class="sub">主动使用</span></div>
+          <button class="ai-act" id="aiGenChapter">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+            生成本章初稿<span class="desp">按大纲 + 前文</span>
+          </button>
+          <button class="ai-act" id="aiContinue">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h13M13 6l6 6-6 6"/></svg></span>
+            续写<span class="desp">承接最后一段</span>
+          </button>
+          <button class="ai-act" id="aiRewrite">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></span>
+            改写润色<span class="desp">选中或整章</span>
+          </button>
+          <button class="ai-act" id="aiHumanize">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.2 5.3L20 10l-5.8 1.7L12 17l-2.2-5.3L4 10l5.8-1.7z"/></svg></span>
+            去 AI 味<span class="desp">人性化重写</span>
+          </button>
+          <button class="ai-act" id="aiNames">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.2"/><circle cx="15.5" cy="15.5" r="1.2"/></svg></span>
+            随机取名<span class="desp">先选类别</span>
+          </button>
+          <button class="ai-act" id="aiIdea">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.4 2.3c-.8.3-.9 1-.9 1.7"/><circle cx="12" cy="17" r=".5"/></svg></span>
+            卡文急救<span class="desp">给 3 个如果</span>
+          </button>
+          <button class="ai-act" id="aiOutline">
+            <span class="ai"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h10M4 19h13"/></svg></span>
+            全书大纲<span class="desp">分卷 + 前 10 章</span>
+          </button>
+          <div class="lexicon" id="namePool" style="display:none;margin-top:9px"></div>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">灵感素材</span><span class="sub" id="inspCount">0 条</span></div>
+          <textarea class="note-area insp-input" id="inspInput" placeholder="一个反常的细节、一句能立人物的话、一个还没用的反转…"></textarea>
+          <div class="insp-tools">
+            <div class="seg" id="inspKindSeg">
+              <button data-kind="场景" class="on">场景</button>
+              <button data-kind="桥段">桥段</button>
+              <button data-kind="金句">金句</button>
+              <button data-kind="设定">设定</button>
+              <button data-kind="反转">反转</button>
+            </div>
+            <button class="mini-btn primary" id="inspAddBtn">＋ 收进素材库</button>
+          </div>
+          <div id="inspList"></div>
+          <button class="mini-btn" id="breakdownBtn" style="margin-top:8px">竞品拆书</button>
+        </div>
+        <div class="rcard" id="aiResultCard" hidden>
+          <div class="rh"><span class="tt">AI 产出</span><span class="sub" id="aiResultMeta"></span></div>
+          <div class="ai-result" id="aiResult"></div>
+          <div class="mrow" style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px">
+            <button class="mini-btn" id="aiInsertBtn">插入光标处</button>
+            <button class="mini-btn" id="aiOutlineSaveBtn" hidden>存为全书大纲</button>
+            <button class="mini-btn primary" id="aiReplaceBtn">替换正文</button>
+          </div>
+        </div>
+        <div class="rcard" id="aiDiffCard" hidden>
+          <div class="rh"><span class="tt">改动明细</span>
+            <span class="ops"><button class="mini-btn" id="aiDiffFoldAll">收起全文</button></span>
+          </div>
+          <div class="ai-diff-meta" id="aiDiffMeta"></div>
+          <div class="ai-diff" id="aiDiff"></div>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">创作数据</span><span class="sub" id="signalGenre">—</span></div>
+          <div class="stat-mini">
+            <div class="sm"><b id="statWords">0</b><span>全书写字</span></div>
+            <div class="sm"><b id="statChapters">0</b><span>章节</span></div>
+            <div class="sm"><b id="statAvg">0</b><span>平均章长</span></div>
+          </div>
+          <div class="outline-li"><span class="oi">今</span><span>今日已写 <b id="statToday">0</b> 字 · 连续码字 <b id="statStreak">0</b> 天</span></div>
+          <div class="outline-li"><span class="oi">计</span><span id="statEta">写满目标还需 — 天</span></div>
+        </div>
+      </div>
+
+      <!-- 自检 -->
+      <div data-pane="check" hidden>
+        <div class="rcard">
+          <div class="rh"><span class="tt">敏感词 · 风险</span><button class="mini-btn" id="lexBtn">词库</button></div>
+          <div class="stat-mini">
+            <div class="sm"><b id="senCount" class="warn">0</b><span>命中待处理</span></div>
+            <div class="sm"><b id="senScanned">0</b><span>已扫描字数</span></div>
+            <div class="sm"><b id="senLex">0</b><span>词库规模</span></div>
+          </div>
+          <div id="senList" style="margin-top:10px"></div>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">AI 味检测</span><span class="sub" id="judgeEngine">本地统计 + 模型复核</span></div>
+          <div class="judge-score">
+            <div class="judge-seal" id="judgeSeal">—</div>
+            <div class="jt"><b id="judgeTitle">尚未检测</b><span id="judgeDesc">点下方按钮，从五个维度查这一章的 AI 味，并定位到具体段落。</span></div>
+          </div>
+          <div id="judgeDetail"></div>
+          <div class="seg" id="judgeModeSeg" style="margin-top:10px">
+            <button data-jmode="wen" class="on">文 · 常规</button>
+            <button data-jmode="wu">武 · 严格</button>
+          </div>
+          <button class="mini-btn primary" style="margin-top:10px;width:100%" id="judgeBtn">检测本章 AI 味</button>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">重复用词</span><span class="sub">当前整章</span></div>
+          <div class="lexicon" id="repeatList"></div>
+        </div>
+        <div class="rcard">
+          <div class="rh"><span class="tt">段落节奏</span><span class="sub">手机阅读友好</span></div>
+          <div id="rhythmList"></div>
+        </div>
+      </div>
+
+      <!-- 搭子 -->
+      <div data-pane="companion" hidden>
+        <div class="rcard chat-card">
+          <div class="rh"><span class="tt">写作搭子</span><span class="chat-mode" id="chatMode" hidden>成人模式</span><span class="sub" id="chatSub">已读你的设定、大纲与正文</span></div>
+          <div class="chat-quick" id="chatQuick">
+            <button class="lex" data-prompt="这一章问题在哪？指出三处最该改的，每处引一句原文，并给出改法。">挑毛病</button>
+            <button class="lex" data-prompt="接下来三个走向，每个用几句话写清会发生什么，并说明哪个最贴合已有伏笔。">三个走向</button>
+            <button class="lex" data-prompt="把这一章结尾重写得更有钩子，直接给我能用的正文，不要解释。">重写结尾</button>
+            <button class="lex" data-prompt="这一段对话不像人说的，重写成口语，保留人物各自的说话习惯。">改对话</button>
+            <button class="lex" data-prompt="给这一章补两处具体的感官细节（气味、声音、触感），直接写成正文句子。">补细节</button>
+            <button class="lex" data-prompt="把这一章开头两句改得更有画面感，直接在正文里改，别在聊天里贴稿。">改开头</button>
+          </div>
+          <div class="chat-log" id="chatLog"></div>
+          <div class="chat-ctx-bar">
+            <div class="chat-ctx" id="chatCtx"></div>
+            <button class="chat-clear" id="chatHistory">历史</button>
+            <button class="chat-clear" id="chatNew">新对话</button>
+            <button class="chat-clear" id="chatClear">清空</button>
+          </div>
+          <div class="chat-input-row">
+            <textarea class="note-area chat-input" id="chatInput" placeholder="问设定、要桥段、挑毛病；要改正文就说「把这段改成…」，它直接在正文里动手（Enter 发送）" autocomplete="off"></textarea>
+            <button class="mini-btn primary" id="chatSend">发送</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="drawer-mask" id="drawerMask"></div>
+</div>
+
+<!-- ================= 专注模式 ================= -->
+<!-- 退出专注 / 阅读模式：固定在顶端正中央，细条浮在最上面，不压正文 -->
+<div class="focus-exit" id="focusExitWrap">
+  <button class="pill-btn ghost" id="readEnter" title="阅读模式：全文多人有声剧配音">阅读模式</button>
+  <button class="pill-btn ghost" id="focusExit" title="退出专注模式（Esc）">退出专注</button>
+</div>
+<div class="focus-stats">
+  <span>本章 <b id="fsCh">0</b></span>
+  <span>今日 <b id="fsToday">0</b></span>
+  <span><b id="fsRate">0</b> 字/分</span>
+  <span id="fsClock">--:--</span>
+</div>
+
+<!-- ================= 阅读模式（专注模式下的有声剧） ================= -->
+<div class="read-mode" id="readMode" hidden>
+  <div class="rm-head">
+    <span class="rm-title" id="rmTitle">—</span>
+    <span class="rm-sub" id="rmSub"></span>
+  </div>
+  <div class="rm-cast scroll-thin" id="rmCastStrip"></div>
+  <div class="rm-stage scroll-thin" id="rmStage"></div>
+  <div class="rm-bar">
+    <button class="rm-btn" id="rmPrev" title="上一段">‹</button>
+    <button class="rm-btn rm-play" id="rmPlay" title="播放 / 暂停">▶</button>
+    <button class="rm-btn" id="rmNext" title="下一段">›</button>
+    <span class="rm-sep"></span>
+    <label class="rm-fld">范围
+      <select id="rmScope">
+        <option value="chapter" selected>本章</option>
+        <option value="book">全书</option>
+      </select>
+    </label>
+    <label class="rm-fld">语速
+      <select id="rmRate">
+        <option value="-20%">慢</option>
+        <option value="+0%" selected>正常</option>
+        <option value="+20%">快</option>
+        <option value="+40%">很快</option>
+      </select>
+    </label>
+    <label class="rm-fld">配音
+      <select id="rmCast">
+        <option value="drama" selected>多人有声剧</option>
+        <option value="solo">单人朗读</option>
+      </select>
+    </label>
+    <label class="rm-fld">氛围
+      <select id="rmMix">
+        <option value="auto" selected>环境声+BGM</option>
+        <option value="fx">仅环境声</option>
+        <option value="none">纯净人声</option>
+      </select>
+    </label>
+    <span class="rm-hint" id="rmHint"></span>
+    <button class="rm-btn" id="rmDl" title="导出本章 mp3">⤓</button>
+    <button class="rm-btn rm-close" id="rmClose" title="退出阅读模式">✕</button>
+  </div>
+</div>
+
+<!-- ================= 手机排版抽屉 ================= -->
+<div class="drawer" id="phoneDrawer">
+  <div class="drawer-head">
+    <div>
+      <div class="tt">手机排版</div>
+      <div class="sub">按手机阅读习惯重排正文 · 可直接应用到稿件</div>
+    </div>
+    <button class="icon-btn" id="phoneClose" aria-label="关闭"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="drawer-body">
+    <div class="st-row" style="gap:8px;margin-bottom:10px;flex-wrap:wrap">
+      <select id="phWidth" style="height:32px;border-radius:9px;border:1px solid var(--line);background:var(--paper);padding:0 8px;font-size:12px">
+        <option value="50">每段 50 字</option>
+        <option value="70" selected>每段 70 字</option>
+        <option value="90">每段 90 字</option>
+      </select>
+      <button class="mini-btn primary" id="phApply">应用到正文</button>
+      <button class="mini-btn" id="phCopy">复制全文</button>
+    </div>
+    <div class="hint" id="phInfo" style="font-size:11px;color:var(--muted);margin-bottom:8px"></div>
+    <div class="phone">
+      <div class="phone-status"><b>9:41</b><span class="phone-island"></span></div>
+      <div class="phone-reading">
+        <div class="ph-src">阅读预览</div>
+        <h4 id="phTitle">—</h4>
+        <div class="ph-meta" id="phMeta">—</div>
+        <div class="ph-body" id="phBody"></div>
+        <div class="ph-end en-label">END · 下一章</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 弹窗 ================= -->
+<div class="modal-mask" id="lockModal">
+  <div class="modal">
+    <h3>码字锁</h3>
+    <div class="md">锁定期间记录进度，写满目标字数自动解锁——治拖延，也治手痒想切屏。</div>
+    <div class="mi-row">
+      <input type="number" id="lockGoal" value="500" min="50" step="50">
+      <span style="align-self:center;color:var(--muted);font-size:12.5px">字</span>
+    </div>
+    <div class="seg" id="lockSeg">
+      <button>300</button><button class="on">500</button><button>1000</button><button>2000</button>
+    </div>
+    <div class="mrow">
+      <button class="mini-btn" data-close>取消</button>
+      <button class="pill-btn" id="lockStart">上锁</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="shortcutsModal">
+  <div class="modal">
+    <h3>快捷键</h3>
+    <div class="md">常用操作都有一双手就能按到的键位。</div>
+    <div id="scList"></div>
+    <div class="mrow"><button class="pill-btn" data-close>知道了</button></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="snapModal">
+  <div class="modal" style="width:440px">
+    <h3>历史快照</h3>
+    <div class="md">每 5 分钟与每次手动「存稿」自动留存，防断电、防误删、防手滑。</div>
+    <div id="snapList"></div>
+    <div class="mrow"><button class="pill-btn" data-close>关闭</button></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="trashModal">
+  <div class="modal" style="width:440px">
+    <h3>回收站</h3>
+    <div class="md">删除的章节先放这里，随时找回。</div>
+    <div id="trashList"></div>
+    <div class="mrow"><button class="pill-btn" data-close>关闭</button></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="lexModal">
+  <div class="modal" style="width:440px">
+    <h3>敏感词词库</h3>
+    <div class="md">内置平台风险词库，可添加自己的词。命中会在正文以朱色高亮。</div>
+    <div class="mi-row">
+      <input type="text" id="lexInput" placeholder="输入词语后回车">
+      <button class="pill-btn" id="lexAddBtn">添加</button>
+    </div>
+    <div class="lexicon" id="lexModalBox"></div>
+    <div class="mrow"><button class="pill-btn" data-close>完成</button></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="goalModal">
+  <div class="modal">
+    <h3>今日码字目标</h3>
+    <div class="md">把目标定小一点，先让手停下来写。</div>
+    <div class="mi-row">
+      <input type="number" id="goalInput" value="3000" min="100" step="100">
+      <span style="align-self:center;color:var(--muted);font-size:12.5px">字/天</span>
+    </div>
+    <div class="seg" id="goalSeg">
+      <button>1000</button><button>2000</button><button class="on">3000</button><button>5000</button>
+    </div>
+    <div class="mrow">
+      <button class="mini-btn" data-close>取消</button>
+      <button class="pill-btn" id="goalSave">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="typoModal">
+  <div class="modal" style="width:520px">
+    <h3>排版</h3>
+    <div class="md">正文的字体、字号、行距与首行缩进；也可一键自动排版。</div>
+    <div class="typo-row"><label>字号</label><input type="range" id="typoSize" min="14" max="24" step="1"><span class="typo-val" id="typoSizeVal">17px</span></div>
+    <div class="typo-row"><label>行距</label><input type="range" id="typoLeading" min="14" max="24" step="1"><span class="typo-val" id="typoLeadingVal">1.6</span></div>
+    <div class="typo-row"><label>缩进</label><input type="range" id="typoIndent" min="0" max="4" step="1"><span class="typo-val" id="typoIndentVal">2em</span></div>
+    <div class="seg" id="typoFamily">
+      <button data-family="serif" class="on">宋体</button>
+      <button data-family="sans">黑体</button>
+    </div>
+
+    <div class="bg-section" style="margin-top:14px"><span class="en-label">自动排版 · 整理成易读格式</span>
+      <div class="st-row" style="gap:12px;flex-wrap:wrap;font-size:12px;color:var(--ink-2)">
+        <label style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="afPunct" checked>中文标点</label>
+        <label style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="afMerge" checked>合并硬换行</label>
+        <label style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="afBlank" checked>去多余空行</label>
+        <label style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="afIndent" checked>首行缩进</label>
+        <label style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="afDialog" checked>对话独立成段</label>
+      </div>
+      <div class="seg" id="afScopeSeg" style="margin-top:10px">
+        <button data-afscope="book" class="on">应用到全书</button>
+        <button data-afscope="chapter">只应用到本章</button>
+      </div>
+      <div class="st-row">
+        <button class="mini-btn" id="afPreview">预览结果</button>
+        <button class="mini-btn primary" id="afApply">自动排版并应用</button>
+      </div>
+      <div class="ai-result" id="afPreviewBox" hidden style="max-height:170px;margin-top:8px"></div>
+    </div>
+
+    <div class="mrow"><button class="pill-btn" data-close>完成</button></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="bgModal">
+  <div class="modal" style="width:500px">
+    <h3>写作设置</h3>
+    <div class="md">主题、纸面、氛围模式、打字音效都在这里，改动即时生效。</div>
+
+    <div class="bg-section"><span class="en-label">主题</span>
+      <div class="seg" id="themeSeg">
+        <button data-theme-btn="paper" class="on">日间</button>
+        <button data-theme-btn="eye">护眼</button>
+        <button data-theme-btn="night">夜间</button>
+      </div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">纸面</span>
+      <div class="seg" id="paperSeg">
+        <button data-paper-btn="plain" class="on">素白</button>
+        <button data-paper-btn="rice">米黄</button>
+        <button data-paper-btn="grid">格线</button>
+      </div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">正文排版</span>
+      <div class="typo-row"><label>字号</label><input type="range" id="wsSize" min="14" max="30" step="1"><span class="typo-val" id="wsSizeVal">17px</span></div>
+      <div class="typo-row"><label>行距</label><input type="range" id="wsLeading" min="14" max="26" step="1"><span class="typo-val" id="wsLeadingVal">1.6</span></div>
+      <div class="typo-row"><label>缩进</label><input type="range" id="wsIndent" min="0" max="4" step="1"><span class="typo-val" id="wsIndentVal">2em</span></div>
+      <div class="typo-row"><label style="width:52px">左右留白</label><input type="range" id="wsSide" min="24" max="160" step="2"><span class="typo-val" id="wsSideVal">58px</span></div>
+      <div class="seg" id="wsFamily">
+        <button data-family="serif">宋体</button>
+        <button data-family="sans" class="on">黑体</button>
+      </div>
+      <div class="st-row" style="gap:6px">
+        <input id="wsFontName" placeholder="自定义字体名（需本机已安装）" autocomplete="off"
+               style="flex:1;height:30px;border-radius:9px;border:1px solid var(--line);background:var(--paper);padding:0 10px;font-size:12px;color:var(--ink);outline:none">
+        <button class="mini-btn" id="wsFontApply">应用</button>
+      </div>
+      <div class="hint" style="font-size:11px;color:var(--muted)">调小左右留白可扩大书写区；排版只保存在本机。</div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">字色与光标</span>
+      <div class="seg" id="wsInkSeg">
+        <button data-ink="auto" class="on">跟随主题</button>
+        <button data-ink="custom">自定义</button>
+      </div>
+      <div class="typo-row" id="wsInkRow" hidden><label style="width:52px">正文字色</label><input type="color" id="wsInkColor" value="#1d1e20" style="width:44px;height:28px;border:none;background:none;padding:0;cursor:pointer">
+      </div>
+      <div class="hint" style="font-size:11px;color:var(--muted)">字色会跟着主题和氛围自动校正明暗，深色背景下自动提亮，保证正文始终看得清。</div>
+      <button class="mini-btn" id="wsTypewriter" role="switch" aria-checked="false">光标居中 · 已关闭</button>
+    </div>
+
+    <div class="bg-section"><span class="en-label">氛围场景</span>
+      <div class="background-choices" id="sceneChoices"></div>
+      <div class="st-row" style="margin-top:8px">
+        <button class="mini-btn" id="assetLibBtn">素材库 · 背景 / 纹理 / 图标 / 音效</button>
+      </div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">应用范围</span>
+      <div class="seg" id="sceneScopeSeg">
+        <button data-scope="global" class="on">全局铺满</button>
+        <button data-scope="page">仅正文纸面</button>
+      </div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">纸面透明度</span>
+      <div class="typo-row"><label>纸面</label><input type="range" id="paperAlpha" min="0" max="100" step="1"><span class="typo-val" id="paperAlphaVal">100%</span></div>
+      <div class="seg" id="autoAlphaSeg">
+        <button data-auto-alpha="1" class="on">随氛围自动</button>
+        <button data-auto-alpha="0">手动</button>
+      </div>
+      <div class="hint" style="margin-top:6px">开启后选氛围场景时，纸面与侧栏会自动变透，让场景真正透出来。</div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">自定义背景图</span>
+      <div class="st-row" style="gap:8px">
+        <input type="file" id="bgFileInput" class="file-hidden" accept="image/png,image/jpeg,image/webp">
+        <button class="mini-btn" id="bgUploadBtn">上传图片</button>
+        <button class="mini-btn" id="bgClearCustom" hidden>清除自定义</button>
+        <span class="hint" id="bgCustomName" style="font-size:11px;color:var(--muted)"></span>
+      </div>
+      <div class="hint" style="font-size:11px;color:var(--muted);margin-top:6px">支持 jpg / png / webp，建议 16:9 横图，单张不超过 8MB。</div>
+      <div class="st-row" style="gap:6px;margin-top:8px">
+        <input id="bgUrlInput" placeholder="或粘贴图片地址 https://…" autocomplete="off"
+               style="flex:1;height:32px;border-radius:9px;border:1px solid var(--line);background:var(--paper);padding:0 10px;font-size:12px;color:var(--ink);outline:none">
+        <button class="mini-btn" id="bgUrlApply">应用地址</button>
+      </div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">场景强度</span>
+      <div class="typo-row"><label>浓度</label><input type="range" id="sceneOpacity" min="0" max="100" step="1"><span class="typo-val" id="sceneOpacityVal">50%</span></div>
+      <div class="typo-row"><label>模糊</label><input type="range" id="sceneBlur" min="0" max="20" step="1"><span class="typo-val" id="sceneBlurVal">0px</span></div>
+      <div class="typo-row"><label>蒙层</label><input type="range" id="sceneScrim" min="0" max="90" step="1"><span class="typo-val" id="sceneScrimVal">40%</span></div>
+    </div>
+
+    <div class="bg-section"><span class="en-label">打字音效</span>
+      <div class="sfx-grid" id="sfxSeg">
+        <button data-sfx="none" class="on">关闭</button>
+        <button data-sfx="mechanical">机械键盘</button>
+        <button data-sfx="typewriter">打字机</button>
+        <button data-sfx="waveclick">电子点击</button>
+        <button data-sfx="pencil">铅笔沙沙</button>
+        <button data-sfx="ballpoint">圆珠笔</button>
+        <button data-sfx="drop">水滴</button>
+        <button data-sfx="mahjong">麻将</button>
+        <button data-sfx="muyu">木鱼</button>
+        <button data-sfx="black">黑轴</button>
+        <button data-sfx="red">红轴</button>
+        <button data-sfx="scifi">编程短音</button>
+        <button data-sfx="cute">动森</button>
+        <button data-sfx="dog">犬吠</button>
+        <button data-sfx="ak">枪响</button>
+      </div>
+      <div class="typo-row"><label>音量</label><input type="range" id="sfxVol" min="0" max="100" step="1" value="60"><span class="typo-val" id="sfxVolVal">60%</span></div>
+      <div class="hint" style="margin-top:4px">只在你手打字时响，粘贴和 AI 写入不响。</div>
+    </div>
+
+    <div class="mrow"><button class="pill-btn" data-close>完成</button></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="settingsModal">
+  <div class="modal" style="width:720px;max-width:94vw">
+    <h3>设置</h3>
+    <div class="md">接口、外观、写作、数据都在这里，改完即时生效。</div>
+    <div class="set-tabs" id="setTabs">
+      <button data-set-tab="api" class="on">接口</button>
+      <button data-set-tab="look">外观</button>
+      <button data-set-tab="write">写作</button>
+      <button data-set-tab="data">数据</button>
+      <button data-set-tab="sync">同步</button>
+      <button data-set-tab="about">关于</button>
+    </div>
+
+    <div class="set-pane" data-set-pane="api">
+      <div class="field"><label>API Key</label><input type="password" id="setKey" placeholder="sk-…"></div>
+      <div class="field-row">
+        <div class="field"><label>Base URL</label><input type="text" id="setBase" placeholder="https://api.deepseek.com/v1"></div>
+        <div class="field"><label>模型</label><input type="text" id="setModel" placeholder="deepseek-chat"></div>
+      </div>
+      <div class="set-split">绘图接口（可选，用于「AI 立绘」）</div>
+      <div class="field-row">
+        <div class="field"><label>绘图 Base URL</label><input type="text" id="setImgBase" placeholder="https://api.siliconflow.cn/v1"></div>
+        <div class="field"><label>绘图模型</label><input type="text" id="setImgModel" placeholder="Kwai-Kolors/Kolors"></div>
+      </div>
+      <div class="field"><label>绘图 API Key</label><input type="password" id="setImgKey" placeholder="sk-…（留空则用内置古风立绘）"></div>
+      <div class="set-split">听写接口（可选，用于「听写」语音转文字）</div>
+      <div class="field-row">
+        <div class="field"><label>听写 Base URL</label><input type="text" id="setAsrBase" placeholder="https://api.siliconflow.cn/v1"></div>
+        <div class="field"><label>听写模型</label><input type="text" id="setAsrModel" placeholder="FunAudioLLM/SenseVoiceSmall"></div>
+      </div>
+      <div class="field"><label>听写 API Key</label><input type="password" id="setAsrKey" placeholder="sk-…（留空则用主接口 Key）"></div>
+      <div class="st-row" style="gap:8px;align-items:center;margin-top:8px">
+        <button class="mini-btn" id="dictModelBtn">下载离线听写模型</button>
+        <span class="hint" id="dictModelStatus" style="font-size:11px;color:var(--muted)">检查中…</span>
+      </div>
+      <div class="hint" style="font-size:11px;color:var(--muted);margin-top:4px">离线模型约 228MB，只下载一次；装好后听写不联网也能用，优先于上面的云端听写。</div>
+      <div class="set-split">配音引擎（有声剧「阅读模式」使用）</div>
+      <div class="field-row">
+        <div class="field"><label>引擎</label>
+          <select id="setTtsProvider">
+            <option value="auto">自动（按已填 Key 择优）</option>
+            <option value="minimax">MiniMax 海螺（真人音色库）</option>
+            <option value="volc">火山引擎豆包（番茄同源）</option>
+            <option value="azure">Azure 情感风格</option>
+            <option value="edge">Edge 基础（免费，机械感较强）</option>
+          </select>
+        </div>
+        <div class="field"><label>当前生效</label><input type="text" id="setTtsActive" readonly></div>
+      </div>
+      <div class="field-row">
+        <div class="field" style="flex:2"><label>MiniMax API Key</label><input type="password" id="setMinimaxKey" placeholder="platform.minimaxi.com → 接口密钥"></div>
+        <div class="field" style="flex:1"><label>模型</label>
+          <select id="setMinimaxModel">
+            <option value="speech-2.8-hd">speech-2.8-hd（最自然，支持语气词）</option>
+            <option value="speech-2.8-turbo">speech-2.8-turbo（快）</option>
+            <option value="speech-2.6-hd">speech-2.6-hd</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>火山 APPID</label><input type="text" id="setVolcAppid" placeholder="语音技术控制台 APPID"></div>
+        <div class="field"><label>火山 Access Token</label><input type="password" id="setVolcToken" placeholder="访问令牌"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Azure Key</label><input type="password" id="setAzureKey" placeholder="speech 资源密钥"></div>
+        <div class="field"><label>Azure 区域</label><input type="text" id="setAzureRegion" placeholder="eastasia"></div>
+      </div>
+      <div class="st-row" style="gap:8px;align-items:center;margin-top:8px">
+        <button class="mini-btn" id="ttsSampleBtn">试听这句</button>
+        <span class="hint" id="ttsStatus" style="font-size:11px;color:var(--muted)">先保存接口，再试听</span>
+        <audio id="ttsSampleAudio" controls style="height:28px;display:none"></audio>
+      </div>
+      <div class="hint" style="font-size:11px;color:var(--muted);margin-top:4px">三家都填也行：自动模式优先 MiniMax → 火山 → Azure。没填任何 Key 就用 Edge 基础音色（就是现在这版，机械感较强）。</div>
+      <div class="mrow">
+        <span class="md" id="setStatus" style="margin:0 auto 0 0"></span>
+        <button class="mini-btn" id="setTest">测试连接</button>
+        <button class="pill-btn" id="setSave">保存接口</button>
+      </div>
+    </div>
+
+    <div class="set-pane" data-set-pane="look" hidden>
+      <div class="field"><label>主题</label>
+        <div class="seg" id="setThemeSeg">
+          <button data-theme-btn="paper" class="on">日间</button>
+          <button data-theme-btn="eye">护眼</button>
+          <button data-theme-btn="night">夜间</button>
+        </div>
+      </div>
+      <div class="field"><label>纸面</label>
+        <div class="seg" id="setPaperSeg">
+          <button data-paper-btn="plain" class="on">素白</button>
+          <button data-paper-btn="rice">米黄</button>
+          <button data-paper-btn="grid">格线</button>
+        </div>
+      </div>
+      <div class="field"><label>氛围场景</label>
+        <div class="seg" id="setSceneSeg"></div>
+      </div>
+      <div class="field"><label>应用范围</label>
+        <div class="seg" id="setScopeSeg">
+          <button data-scope="global" class="on">全局铺满</button>
+          <button data-scope="page">仅正文纸面</button>
+        </div>
+      </div>
+      <div class="typo-row"><label>浓度</label><input type="range" id="setSceneOpacity" min="0" max="100" step="1"><span class="typo-val" id="setSceneOpacityVal">50%</span></div>
+      <div class="typo-row"><label>模糊</label><input type="range" id="setSceneBlur" min="0" max="20" step="1"><span class="typo-val" id="setSceneBlurVal">0px</span></div>
+      <div class="typo-row"><label>蒙层</label><input type="range" id="setSceneScrim" min="0" max="90" step="1"><span class="typo-val" id="setSceneScrimVal">40%</span></div>
+      <div class="mrow">
+        <button class="mini-btn" id="setLookUpload">上传自定义背景</button>
+        <button class="mini-btn" id="setLookClear" hidden>清除自定义</button>
+        <button class="mini-btn" id="setOpenBg">更多外观（预览缩略图）</button>
+      </div>
+    </div>
+
+    <div class="set-pane" data-set-pane="write" hidden>
+      <div class="field-row">
+        <div class="field"><label>每日码字目标（字）</label><input type="number" id="setGoal" min="100" step="100"></div>
+        <div class="field"><label>自动保存间隔</label>
+          <select id="setAutosave">
+            <option value="600">0.6 秒</option>
+            <option value="900">0.9 秒</option>
+            <option value="1500">1.5 秒</option>
+            <option value="3000">3 秒</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>番茄钟专注（分钟）</label><input type="number" id="setPomoFocus" min="5" max="90"></div>
+        <div class="field"><label>番茄钟休息（分钟）</label><input type="number" id="setPomoRest" min="1" max="30"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>码字锁默认目标（字）</label><input type="number" id="setLockGoal" min="50" step="50"></div>
+        <div class="field"><label>编辑器字体</label>
+          <select id="setEditorFont"><option value="sans">黑体</option><option value="serif">宋体</option></select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field" style="flex:1">
+          <label>去 AI 味 · 人味瑕疵</label>
+          <label style="display:flex;gap:6px;align-items:center;font-size:12px;color:var(--ink-2)">
+            <input type="checkbox" id="setHumanFlaws" checked>
+            允许极少量「的/地/得」误用与个别错字（人类作者也会犯错，默认开）
+          </label>
+        </div>
+      </div>
+      <div class="mrow">
+        <span class="md" id="setWriteStatus" style="margin:0 auto 0 0"></span>
+        <button class="mini-btn" id="setLexManage">敏感词库</button>
+        <button class="mini-btn" id="setTypo">排版细节</button>
+        <button class="pill-btn" id="setWriteSave">保存写作设置</button>
+      </div>
+    </div>
+
+    <div class="set-pane" data-set-pane="data" hidden>
+      <div class="field"><label>项目数据</label>
+        <div class="md" style="margin:0">项目存于 <code>projects/*.json</code>；删除会移到 <code>projects/_trash</code>；写盘前每 5 分钟滚动备份到 <code>projects/_backups</code>。</div>
+      </div>
+      <div class="st-row" style="margin:12px 0">
+        <button class="mini-btn" id="setExportAll">导出全部项目</button>
+        <button class="mini-btn" id="setOpenTrash">项目回收站</button>
+        <button class="mini-btn seal" id="setClearLocal">清空本地缓存</button>
+      </div>
+      <div id="setTrashBox" hidden>
+        <div class="field"><label>可找回的项目（服务端回收站）</label></div>
+        <div class="st-list" id="setTrashList" style="max-height:220px;overflow:auto"></div>
+      </div>
+      <div class="md" id="setDataStatus" style="margin-top:8px"></div>
+    </div>
+
+    <div class="set-pane" data-set-pane="sync" hidden>
+      <div class="field"><label>这台设备怎么用</label>
+        <div class="seg" id="setSyncRole">
+          <button data-sync-role="off" class="on">不同步</button>
+          <button data-sync-role="hub">本机当同步中心</button>
+          <button data-sync-role="client">连到同步中心</button>
+        </div>
+      </div>
+      <div id="syncHubBox" hidden>
+        <div class="md" style="margin:0 0 10px">开着「写作台 / 网页版」这台电脑就是服务器本体，不花钱、不依赖任何第三方网盘。同一 WiFi 下的手机填下面的局域网地址即可；人不在家就开公网隧道。</div>
+        <div class="field"><label>局域网地址（手机同 WiFi 填这个）</label><input type="text" id="setSyncLan" readonly placeholder="开启后自动生成"></div>
+        <div class="field"><label>同步令牌（另一端要填同一个）</label>
+          <div class="st-row" style="gap:8px">
+            <input type="text" id="setSyncToken" readonly style="flex:1">
+            <button class="mini-btn" id="setSyncCopyToken">复制</button>
+            <button class="mini-btn" id="setSyncRotate">换新令牌</button>
+          </div>
+        </div>
+        <div class="field"><label>公网隧道（免费，外出也能同步）</label>
+          <div class="st-row" style="gap:10px;align-items:center;font-size:12px;color:var(--muted)">
+            <label><input type="checkbox" id="setSyncTunnel" style="vertical-align:-2px"> 开启（首次自动下载 cloudflared，约 40MB，只需一次）</label>
+          </div>
+          <input type="text" id="setSyncPublic" readonly placeholder="开启后自动生成 https://xxx.trycloudflare.com">
+        </div>
+      </div>
+      <div id="syncClientBox" hidden>
+        <div class="md" style="margin:0 0 10px">把另一台电脑（当同步中心的那台）「同步」页里的地址和令牌填进来。手机在同 WiFi 用局域网地址，外出用隧道地址。</div>
+        <div class="field"><label>同步中心地址</label><input type="text" id="setSyncHub" placeholder="http://192.168.1.5:8766"></div>
+        <div class="field"><label>令牌</label><input type="text" id="setSyncToken2" placeholder="在另一端的「同步」页复制"></div>
+        <div class="st-row" style="gap:8px;margin-top:8px">
+          <button class="mini-btn" id="setSyncTest">测试连接</button>
+        </div>
+      </div>
+      <div class="mrow" style="margin-top:10px">
+        <span class="md" id="setSyncStatus" style="margin:0 auto 0 0"></span>
+        <button class="mini-btn" id="setSyncNow">立即同步</button>
+        <button class="pill-btn" id="setSyncSave">保存同步设置</button>
+      </div>
+      <div class="hint" id="setSyncHint" style="font-size:11px;color:var(--muted);margin-top:8px"></div>
+    </div>
+
+    <div class="set-pane" data-set-pane="about" hidden>
+      <div class="md" style="line-height:2;margin:0">
+        烽火南境 · 写作台 v2.2<br>
+        界面：炼笔智作（解包重构）· 后端：FastAPI + Python<br>
+        章节与项目数据全部本地存储，AI 调用只走你配置的接口。<br>
+        桌面版功能已并入「AI 工坊」：概念 / 世界观 / 人物 / 大纲 / 正文 / 剧本 / 工具箱。
+      </div>
+      <div class="field" style="margin-top:16px"><label>多端访问</label>
+        <div class="st-list" id="setDeviceInfo"><div class="st-empty">读取中…</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="bookModal">
+  <div class="modal">
+    <h3>新建书籍</h3>
+    <div class="md">书建立后会自动生成「01_正文」分卷，直接开写。</div>
+    <div class="field"><label>开书模板</label><div class="tpl-strip" id="tplStrip"></div></div>
+    <div class="field"><label>书名</label><input type="text" id="newBookName" placeholder="例如：青冥引"></div>
+    <div class="field"><label>作者署名</label><input type="text" id="newBookAuthor" placeholder="笔名（可后填）"></div>
+    <div class="field"><label>题材</label><input type="text" id="newBookGenre" placeholder="东方玄幻"></div>
+    <div class="field"><label>风格</label><input type="text" id="newBookStyle" placeholder="热血励志"></div>
+    <div class="mrow">
+      <button class="mini-btn" data-close>取消</button>
+      <button class="pill-btn" id="newBookSave">建立</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="badgeModal">
+  <div class="modal badge-modal">
+    <div class="shelf-head">
+      <div>
+        <h3>成就徽章</h3>
+        <div class="md" id="badgeSummary" style="margin:0">本地记录自动评定，不需要联网。</div>
+      </div>
+      <button class="pill-btn" data-close>关闭</button>
+    </div>
+    <div class="badge-grid" id="badgeGrid"></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="assetModal">
+  <div class="modal asset-modal">
+    <div class="shelf-head">
+      <div>
+        <h3>素材库</h3>
+        <div class="md" style="margin:0">国风背景、纸纹、图标、头像与音效，可一键设为自定义背景。</div>
+      </div>
+      <button class="pill-btn" data-close>关闭</button>
+    </div>
+    <div class="seg asset-tabs" id="assetTabs">
+      <button data-asset-tab="scene" class="on">背景</button>
+      <button data-asset-tab="texture">纹理 / 装饰</button>
+      <button data-asset-tab="icon">图标 / 头像</button>
+      <button data-asset-tab="audio">音效</button>
+    </div>
+    <div class="asset-grid" id="assetGrid"></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="gsModal">
+  <div class="modal gs-modal">
+    <div class="shelf-head">
+      <div>
+        <h3>全局搜索</h3>
+        <div class="md" style="margin:0">作品 / 章节 / 功能 / 问 AI</div>
+      </div>
+      <button class="pill-btn" data-close>关闭</button>
+    </div>
+    <div class="gs-box">
+      <input id="gsInput" placeholder="搜作品、章节、功能，或直接问 AI…" autocomplete="off">
+      <span class="gs-kbd">Ctrl K</span>
+    </div>
+    <div class="gs-hint" id="gsHint">试试：伏笔 / 模板 / 拆书 / 导出</div>
+    <div class="gs-results scroll-thin" id="gsResults"></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="bdModal">
+  <div class="modal bd-modal">
+    <div class="shelf-head">
+      <div>
+        <h3>竞品拆书</h3>
+        <div class="md" style="margin:0">粘贴一章竞品原文，本地拆结构：节奏 / 对话 / 钩子 / 高频词。不联网、不上传。</div>
+      </div>
+      <button class="pill-btn" data-close>关闭</button>
+    </div>
+    <textarea class="note-area bd-input" id="bdInput" placeholder="粘贴竞品章节原文（至少 100 字）…"></textarea>
+    <div class="bd-tools">
+      <button class="pill-btn" id="bdRun">开始拆解</button>
+      <button class="mini-btn" id="bdSave" disabled>存进拆书档案</button>
+      <button class="mini-btn" id="bdCopy">复制报告</button>
+    </div>
+    <div class="bd-result" id="bdResult"></div>
+    <div class="bd-history">
+      <div class="rh"><span class="tt">拆书档案</span><button class="mini-btn" id="bdClearHistory">清空</button></div>
+      <div id="bdHistory"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="hubModal">
+  <div class="modal hub-modal">
+    <div class="shelf-head">
+      <div>
+        <h3>创作中心</h3>
+        <div class="md" style="margin:0">签到、本地码字排行与近 7 天产出，全部保存在本机。</div>
+      </div>
+      <button class="pill-btn" data-close>关闭</button>
+    </div>
+    <div class="hub-checkin">
+      <div>
+        <b>今日签到</b>
+        <div class="md" style="margin:0" id="hubStreak">连续 0 天</div>
+      </div>
+      <button class="mini-btn primary" id="hubCheckinBtn">签到</button>
+    </div>
+    <div class="rcard" style="margin-top:12px">
+      <div class="rh"><span class="tt">码字排行</span><span class="sub">按本书总字数</span></div>
+      <div id="hubRank"></div>
+    </div>
+    <div class="rcard" style="margin-top:12px">
+      <div class="rh"><span class="tt">近 7 天</span><span class="sub" id="hubWeekSum">0 字</span></div>
+      <div class="hub-week" id="hubWeek"></div>
+      <div class="md" style="margin:8px 0 0" id="hubTip"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-mask" id="importModal">
+  <div class="modal" style="width:520px">
+    <h3>导入书籍 / 章节</h3>
+    <div class="md">支持 .txt / .md（小说原文）与 .json（项目备份）。txt/md 会自动识别「第X章」「Chapter N」等标题拆分。</div>
+    <input type="file" id="importFileInput" class="file-hidden" multiple accept=".txt,.md,.json,text/plain,application/json">
+    <div class="st-row" style="margin:10px 0">
+      <button class="mini-btn" id="importPick">选择文件</button>
+      <span class="hint" id="importFileInfo" style="font-size:11.5px;color:var(--muted)">未选择文件</span>
+    </div>
+    <div class="field"><label>或直接粘贴全文（可选）</label>
+      <textarea id="importPaste" class="st-textarea" style="min-height:90px" placeholder="把小说文本粘到这里也行，含「第X章」标题会自动拆分"></textarea>
+    </div>
+    <div class="field"><label>导入方式</label>
+      <div class="seg" id="importModeSeg">
+        <button data-mode="current" class="on">追加到当前书</button>
+        <button data-mode="new">新建一本书</button>
+      </div>
+    </div>
+    <div class="field" id="importNameField" hidden><label>新书名</label><input id="importBookName" placeholder="默认取文件名"></div>
+    <div class="field"><label>拆分方式</label>
+      <div class="seg" id="importSplitSeg">
+        <button data-split="auto" class="on">按章节标题自动拆分</button>
+        <button data-split="file">每个文件一章</button>
+      </div>
+    </div>
+    <div class="mrow">
+      <span class="md" id="importStatus" style="margin:0 auto 0 0"></span>
+      <button class="mini-btn" data-close>取消</button>
+      <button class="pill-btn" id="importStart">开始导入</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="shelfModal">
+  <div class="modal shelf">
+    <div class="shelf-head">
+      <div>
+        <h3>书架</h3>
+        <div class="md" style="margin:0">全部作品 · 点封面打开，右键或悬停可管理</div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="mini-btn" id="shelfImportBtn">导入书籍</button>
+        <button class="mini-btn" id="shelfBadgeBtn">成就徽章</button>
+        <button class="mini-btn" id="shelfHubBtn">创作中心</button>
+        <button class="mini-btn" id="shelfNewBtn">＋新建书籍</button>
+        <button class="pill-btn" data-close>关闭</button>
+      </div>
+    </div>
+    <div class="shelf-grid" id="shelfGrid"></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="bookSettingsModal">
+  <div class="modal" style="width:520px">
+    <h3>书籍设置</h3>
+    <div class="md">书名会同步改名项目文件；题材/风格/简介会进入 AI 提示词，封面与作者会显示在书架和写作台。</div>
+    <div class="field-row">
+      <div class="field" style="flex:2"><label>书名</label><input type="text" id="bsName"></div>
+      <div class="field" style="flex:1"><label>作者署名</label><input type="text" id="bsAuthor" placeholder="笔名"></div>
+    </div>
+    <div class="field"><label>封面</label>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="cover-preview" id="bsCoverPreview"><span id="bsCoverChar">书</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:6px">
+            <button class="mini-btn" id="bsCoverUpload">上传封面</button>
+            <button class="mini-btn" id="bsCoverClear" hidden>清除封面</button>
+          </div>
+          <span class="hint" style="font-size:11px;color:var(--muted)">建议 3:4 竖图（如 600×800），≤6MB；不传则用书名首字做封面</span>
+        </div>
+      </div>
+      <input type="file" id="bsCoverFile" class="file-hidden" accept="image/png,image/jpeg,image/webp">
+    </div>
+    <div class="field"><label>书籍简介</label>
+      <textarea id="bsDesc" class="st-textarea" style="min-height:86px" placeholder="一句话卖点 / 世界观 / 主线冲突 / 读者对象…"></textarea>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>题材</label><input type="text" id="bsGenre" placeholder="东方玄幻"></div>
+      <div class="field"><label>风格</label><input type="text" id="bsStyle" placeholder="热血励志"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>子类型</label><input type="text" id="bsSubgenre" placeholder="废柴逆袭"></div>
+      <div class="field"><label>参考大神</label><input type="text" id="bsRef" placeholder="天蚕土豆"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>每章字数</label><input type="number" id="bsWords" placeholder="2500"></div>
+      <div class="field"><label>计划章数</label><input type="number" id="bsChapters" placeholder="400"></div>
+    </div>
+    <div class="mrow">
+      <button class="mini-btn seal" id="bsDelete" style="margin-right:auto">删除这本书</button>
+      <span class="md" id="bsStatus"></span>
+      <button class="mini-btn" data-close>取消</button>
+      <button class="pill-btn" id="bsSave">保存</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="charModal">
+  <div class="modal" style="width:460px">
+    <h3>新增人物</h3>
+    <div class="md">这里先填核心信息；完整的角色介绍、关系网、出场章节到工坊「人物」里继续补。</div>
+    <div class="field-row">
+      <div class="field"><label>姓名</label><input type="text" id="charName" placeholder="林晚"></div>
+      <div class="field"><label>别名 / 称呼</label><input type="text" id="charAlias" placeholder="晚儿、阿晚"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>定位</label><input type="text" id="charRole" placeholder="男主 / 女主 / 幕后黑手"></div>
+      <div class="field"><label>身份 / 职业</label><input type="text" id="charDesc" placeholder="青冥剑宗外门弟子"></div>
+    </div>
+    <div class="field"><label>分组</label>
+      <div class="seg" id="charGroup">
+        <button class="on" data-group="主角">主角</button>
+        <button data-group="配角">配角</button>
+        <button data-group="反派">反派</button>
+        <button data-group="龙套">龙套</button>
+      </div>
+    </div>
+    <div class="field"><label>用途（可多选）</label>
+      <div class="ch-chips" id="charPurpose">
+        <button class="ch-chip" data-p="推动主线">推动主线</button>
+        <button class="ch-chip" data-p="制造冲突">制造冲突</button>
+        <button class="ch-chip" data-p="提供信息">提供信息</button>
+        <button class="ch-chip" data-p="情感线">情感线</button>
+        <button class="ch-chip" data-p="衬托主角">衬托主角</button>
+        <button class="ch-chip" data-p="埋伏笔">埋伏笔</button>
+        <button class="ch-chip" data-p="喜剧担当">喜剧担当</button>
+        <button class="ch-chip" data-p="工具人">工具人</button>
+      </div>
+    </div>
+    <div class="field"><label>一句话介绍</label><input type="text" id="charTagline" placeholder="他是谁、想要什么"></div>
+    <div class="field"><label>角色介绍</label><textarea id="charIntro" class="st-textarea" style="min-height:78px" placeholder="出身、经历、与主线的关系…"></textarea></div>
+    <div class="mrow">
+      <button class="mini-btn" data-close>取消</button>
+      <button class="pill-btn" id="charSave">添加</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="nameModal">
+  <div class="modal" style="width:640px">
+    <h3>随机取名</h3>
+    <div class="md">先选大类，再按该类的细分生成；点结果里的名字会直接插入正文光标处。未配置 API 时用内置词库生成。</div>
+    <div class="ng-cats" id="ngCats"></div>
+    <div class="ng-opts" id="ngOpts"></div>
+    <div class="field"><label>附加要求（可选）</label><input type="text" id="ngReq" autocomplete="off" placeholder="例：偏冷色调、别用生僻字、带点西域味"></div>
+    <div class="ng-count">
+      <label>数量</label>
+      <input type="range" id="ngCount" min="4" max="30" step="2" value="14">
+      <b id="ngCountVal">14</b>
+    </div>
+    <div class="mrow">
+      <span class="hint" id="ngEng" style="margin-right:auto"></span>
+      <button class="mini-btn" id="ngClear">清空</button>
+      <button class="mini-btn" data-close>关闭</button>
+      <button class="pill-btn" id="ngRun">生成</button>
+    </div>
+    <div class="ng-results" id="ngResults"></div>
+  </div>
+</div>
+
+<div class="modal-mask" id="inputModal">
+  <div class="modal" style="width:460px">
+    <h3 id="inputTitle">输入</h3>
+    <div class="md" id="inputHint"></div>
+    <div class="field"><input type="text" id="inputValue" autocomplete="off"></div>
+    <div class="field" id="inputAreaWrap" hidden>
+      <textarea id="inputArea" class="note-area" rows="4" placeholder="可换行输入，Ctrl / ⌘ + Enter 提交"></textarea>
+    </div>
+    <div class="mrow">
+      <button class="mini-btn" id="inputCancel">取消</button>
+      <button class="pill-btn" id="inputOk">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="confirmModal">
+  <div class="modal" style="width:400px">
+    <h3 id="confirmTitle">确认</h3>
+    <div class="md" id="confirmText"></div>
+    <div class="mrow">
+      <button class="mini-btn" id="confirmCancel">取消</button>
+      <button class="pill-btn" id="confirmOk">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="pickModal">
+  <div class="modal" style="width:460px">
+    <h3 id="pickTitle">选择</h3>
+    <div class="md" id="pickHint"></div>
+    <div class="pick-list" id="pickList"></div>
+    <div class="mrow">
+      <button class="mini-btn" id="pickCancel">取消</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="canvasModal">
+  <div class="modal" id="canvasCard" style="width:min(1200px,96vw);height:88vh;padding:0;display:flex;flex-direction:column;overflow:hidden">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--line);flex:none">
+      <b style="font-size:13px">写作画布</b>
+      <button class="mini-btn" id="canvasClose">关闭</button>
+    </div>
+    <iframe id="canvasFrame" src="about:blank" style="flex:1;width:100%;border:0;background:var(--paper)"></iframe>
+  </div>
+</div>
+
+<div id="studio" hidden>
+  <div class="studio-shell">
+    <aside class="studio-nav">
+      <div class="studio-brand">工坊</div>
+      <button data-mod="project" class="on">项目</button>
+      <button data-mod="concept">概念</button>
+      <button data-mod="world">世界观</button>
+      <button data-mod="characters">人物</button>
+      <button data-mod="outline">大纲</button>
+      <button data-mod="writing">正文</button>
+      <button data-mod="script">剧本</button>
+      <button data-mod="toolbox">工具箱</button>
+    </aside>
+    <section class="studio-main">
+      <header class="studio-head">
+        <div class="st-titles"><b id="stTitle">工坊</b><span id="stSub">—</span></div>
+        <button class="pill-btn" id="studioClose">回到写作台</button>
+      </header>
+      <div class="studio-body scroll-thin" id="studioBody"></div>
+    </section>
+  </div>
+</div>
+
+<div id="toasts"></div>
+<div class="menu" id="ctxMenu" hidden></div>
+
+<script src="ambient.js"></script>
+<script src="app.js"></script>
+<script src="studio.js"></script>
+</body>
+</html>

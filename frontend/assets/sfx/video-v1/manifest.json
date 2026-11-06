@@ -1,0 +1,424 @@
+{
+  "format": "44.1kHz mono PCM16",
+  "use": "User-provided video extraction for local product trial; no redistribution rights assertion",
+  "sources": [
+    {
+      "file": "3044_1793017481.mp4",
+      "sha256": "f52499a38321e0b449d9a123bb7e2b10344e2b6384805465986f0efa9fe88ec0"
+    },
+    {
+      "file": "3045_1793017483.mp4",
+      "sha256": "3e0143578b0de1fb086ca6276898b034ed5cd4b734d76518e6cebacb20e19caa"
+    },
+    {
+      "file": "3046_1793017485.mp4",
+      "sha256": "250586fd8aa0ff1d0042d81b4668eb5c20b3a67c32579a6e46e58957a0af1be3"
+    }
+  ],
+  "families": {
+    "pencil": {
+      "name": "铅笔沙沙",
+      "video": "3045_1793017483",
+      "spans": [
+        [
+          1,
+          1.12
+        ],
+        [
+          1.21,
+          1.33
+        ],
+        [
+          2.27,
+          2.4
+        ]
+      ],
+      "db": -30
+    },
+    "ballpoint": {
+      "name": "圆珠笔",
+      "video": "3045_1793017483",
+      "spans": [
+        [
+          3.9,
+          4.06
+        ],
+        [
+          4.6,
+          4.76
+        ],
+        [
+          6,
+          6.16
+        ]
+      ],
+      "db": -31
+    },
+    "scifi": {
+      "name": "编程短音",
+      "video": "3044_1793017481",
+      "spans": [
+        [
+          12,
+          12.14
+        ],
+        [
+          12.45,
+          12.59
+        ],
+        [
+          13.18,
+          13.32
+        ]
+      ],
+      "db": -30
+    },
+    "waveclick": {
+      "name": "电子点击",
+      "video": "3046_1793017485",
+      "label": "波动点击",
+      "spans": [
+        [
+          1.89,
+          2.07
+        ],
+        [
+          1.9,
+          2.06
+        ],
+        [
+          1.91,
+          2.09
+        ]
+      ]
+    }
+  },
+  "samples": [
+    {
+      "file": "pencil-1.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        1,
+        1.12
+      ],
+      "resampleRatio": 1,
+      "duration": 0.12,
+      "rmsDbfs": -30.0,
+      "peak": 0.1718,
+      "clippedSamples": 0,
+      "bytes": 10626,
+      "sha256": "442f32428c43d09cd85883ad70c7c1ce545508da5ea95f43dc3ef64831c16060"
+    },
+    {
+      "file": "pencil-2.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        1.21,
+        1.33
+      ],
+      "resampleRatio": 1,
+      "duration": 0.12,
+      "rmsDbfs": -30.0,
+      "peak": 0.1822,
+      "clippedSamples": 0,
+      "bytes": 10626,
+      "sha256": "c9fcb530f5cc369d42db26f68b8359b2cd2563a478b08659fb5fe87fc4912d91"
+    },
+    {
+      "file": "pencil-3.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        2.27,
+        2.4
+      ],
+      "resampleRatio": 1,
+      "duration": 0.13,
+      "rmsDbfs": -30.0,
+      "peak": 0.1546,
+      "clippedSamples": 0,
+      "bytes": 11508,
+      "sha256": "db6e5fedd48b6bfa32504068450d8e794c3fc9c49a3d42072393df414495a467"
+    },
+    {
+      "file": "pencil-space.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        1,
+        1.12
+      ],
+      "resampleRatio": 0.98,
+      "duration": 0.1224,
+      "rmsDbfs": -31.0,
+      "peak": 0.1534,
+      "clippedSamples": 0,
+      "bytes": 10842,
+      "sha256": "b4c150771ffd2552cd907bb53174d2becf7424faaf70fe80768b89a5bb705082"
+    },
+    {
+      "file": "pencil-enter.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        1.21,
+        1.33
+      ],
+      "resampleRatio": 0.93,
+      "duration": 0.129,
+      "rmsDbfs": -29.5,
+      "peak": 0.2073,
+      "clippedSamples": 0,
+      "bytes": 11424,
+      "sha256": "089e78dfa3f90cf538e2e0ba2a73ce04dd6b01c6865a8e2e28337eb11360e77c"
+    },
+    {
+      "file": "ballpoint-1.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        3.9,
+        4.06
+      ],
+      "resampleRatio": 1,
+      "duration": 0.16,
+      "rmsDbfs": -31.0,
+      "peak": 0.3073,
+      "clippedSamples": 0,
+      "bytes": 14152,
+      "sha256": "d79a3d553acfb53c9eaa1df14945b553e2b4b76660d686065cd5357d2daaff5a"
+    },
+    {
+      "file": "ballpoint-2.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        4.6,
+        4.76
+      ],
+      "resampleRatio": 1,
+      "duration": 0.16,
+      "rmsDbfs": -31.0,
+      "peak": 0.0891,
+      "clippedSamples": 0,
+      "bytes": 14156,
+      "sha256": "b351f2c2e01ead0f3ed50142460af7e072ec2b33ddb6d8824741af8d69a791a1"
+    },
+    {
+      "file": "ballpoint-3.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        6,
+        6.16
+      ],
+      "resampleRatio": 1,
+      "duration": 0.16,
+      "rmsDbfs": -31.0,
+      "peak": 0.1218,
+      "clippedSamples": 0,
+      "bytes": 14154,
+      "sha256": "a18b1cd55ac48535f4db3f648812012d5bb0e1b738636be3618e17d742affcd9"
+    },
+    {
+      "file": "ballpoint-space.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        3.9,
+        4.06
+      ],
+      "resampleRatio": 0.98,
+      "duration": 0.1632,
+      "rmsDbfs": -32.0,
+      "peak": 0.267,
+      "clippedSamples": 0,
+      "bytes": 14440,
+      "sha256": "ddaf24f864e6f5e26b518ad44172054b357ad17fce66542d3fd302b9495d6dc8"
+    },
+    {
+      "file": "ballpoint-enter.wav",
+      "source": "3045_1793017483.mp4",
+      "spanSeconds": [
+        4.6,
+        4.76
+      ],
+      "resampleRatio": 0.93,
+      "duration": 0.1721,
+      "rmsDbfs": -30.5,
+      "peak": 0.0938,
+      "clippedSamples": 0,
+      "bytes": 15220,
+      "sha256": "f5753595b8dac445ca27b9ea6edc65b1d37e5598bc332373017933ed9bcafd97"
+    },
+    {
+      "file": "scifi-1.wav",
+      "source": "3044_1793017481.mp4",
+      "spanSeconds": [
+        12,
+        12.14
+      ],
+      "resampleRatio": 1,
+      "duration": 0.14,
+      "rmsDbfs": -30.0,
+      "peak": 0.2504,
+      "clippedSamples": 0,
+      "bytes": 12390,
+      "sha256": "f9c5b833d3e9d1d1fd3853304e95d755479d8da60458adcb136680c40ca168f8"
+    },
+    {
+      "file": "scifi-2.wav",
+      "source": "3044_1793017481.mp4",
+      "spanSeconds": [
+        12.45,
+        12.59
+      ],
+      "resampleRatio": 1,
+      "duration": 0.14,
+      "rmsDbfs": -30.0,
+      "peak": 0.2121,
+      "clippedSamples": 0,
+      "bytes": 12390,
+      "sha256": "944217d6e0ae07b3c44e8d018dfe5221ca06f7e0c674a2d57603c6595f9d9aa0"
+    },
+    {
+      "file": "scifi-3.wav",
+      "source": "3044_1793017481.mp4",
+      "spanSeconds": [
+        13.18,
+        13.32
+      ],
+      "resampleRatio": 1,
+      "duration": 0.14,
+      "rmsDbfs": -30.0,
+      "peak": 0.2068,
+      "clippedSamples": 0,
+      "bytes": 12390,
+      "sha256": "72463f10885538b4e6c131e38d3b6ac593685ccd473948844e7849aed9d90ac6"
+    },
+    {
+      "file": "scifi-space.wav",
+      "source": "3044_1793017481.mp4",
+      "spanSeconds": [
+        12,
+        12.14
+      ],
+      "resampleRatio": 0.98,
+      "duration": 0.1428,
+      "rmsDbfs": -31.0,
+      "peak": 0.2156,
+      "clippedSamples": 0,
+      "bytes": 12642,
+      "sha256": "e2d409d10c2c36ff49f1971a37d5305642e7f6b213c8df01921e1c136cec4d18"
+    },
+    {
+      "file": "scifi-enter.wav",
+      "source": "3044_1793017481.mp4",
+      "spanSeconds": [
+        12.45,
+        12.59
+      ],
+      "resampleRatio": 0.93,
+      "duration": 0.1505,
+      "rmsDbfs": -29.5,
+      "peak": 0.2469,
+      "clippedSamples": 0,
+      "bytes": 13320,
+      "sha256": "195c134088cd089c3bfd0a39f3b70b3b3e37d1fa4ec9d03d50149e071485f76c"
+    },
+    {
+      "file": "waveclick-1.wav",
+      "source": "3046_1793017485.mp4",
+      "sourceLabel": "波动点击",
+      "spanSeconds": [
+        1.89,
+        2.07
+      ],
+      "requestedSpanSeconds": [
+        1.89,
+        2.07
+      ],
+      "resampleRatio": 1,
+      "duration": 0.18,
+      "peak": 0.1006,
+      "rmsDbfs": -30.0,
+      "clippedSamples": 0,
+      "sha256": "65885cb989517f666e6897f6b871212d1710f55c5be7e1511aed2b631952c7fd",
+      "bytes": 15918
+    },
+    {
+      "file": "waveclick-2.wav",
+      "source": "3046_1793017485.mp4",
+      "sourceLabel": "波动点击",
+      "spanSeconds": [
+        1.9,
+        2.06
+      ],
+      "requestedSpanSeconds": [
+        1.9,
+        2.06
+      ],
+      "resampleRatio": 1,
+      "duration": 0.16,
+      "peak": 0.1002,
+      "rmsDbfs": -30.0,
+      "clippedSamples": 0,
+      "sha256": "e3be53fca728b82c515f42f75ab06493846bbf473c07a12815605bb4a6361c71",
+      "bytes": 14154
+    },
+    {
+      "file": "waveclick-3.wav",
+      "source": "3046_1793017485.mp4",
+      "sourceLabel": "波动点击",
+      "spanSeconds": [
+        1.91,
+        2.09
+      ],
+      "requestedSpanSeconds": [
+        1.91,
+        2.09
+      ],
+      "resampleRatio": 1,
+      "duration": 0.18,
+      "peak": 0.1103,
+      "rmsDbfs": -30.0,
+      "clippedSamples": 0,
+      "sha256": "86fd6eb89a87c84ac3f5a3d056f0821eb5e206eb18ea54699d6517b9d09b8f0f",
+      "bytes": 15918
+    },
+    {
+      "file": "waveclick-space.wav",
+      "source": "3046_1793017485.mp4",
+      "sourceLabel": "波动点击",
+      "spanSeconds": [
+        1.89,
+        2.07
+      ],
+      "requestedSpanSeconds": [
+        1.89,
+        2.07
+      ],
+      "resampleRatio": 0.98,
+      "duration": 0.1837,
+      "peak": 0.0896,
+      "rmsDbfs": -31.0,
+      "clippedSamples": 0,
+      "sha256": "1a21c6c6a06343ab780c3eb5e3911d45075200cae81b1e6cbeb61a7b6705fb42",
+      "bytes": 16242
+    },
+    {
+      "file": "waveclick-enter.wav",
+      "source": "3046_1793017485.mp4",
+      "sourceLabel": "波动点击",
+      "spanSeconds": [
+        1.9,
+        2.06
+      ],
+      "requestedSpanSeconds": [
+        1.9,
+        2.06
+      ],
+      "resampleRatio": 0.93,
+      "duration": 0.172,
+      "peak": 0.106,
+      "rmsDbfs": -29.5,
+      "clippedSamples": 0,
+      "sha256": "7286d3b34fe6accc7c9816e657e1f99d939d64b5ba0cd685c2b063774861cdd6",
+      "bytes": 15218
+    }
+  ],
+  "revision": "2026-10-26 keep only waveclick from four new schemes; display waveclick as electronic click, scifi as programming short tone; audio/IDs unchanged"
+}
